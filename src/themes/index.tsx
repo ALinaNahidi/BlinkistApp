@@ -1,9 +1,6 @@
 import { createTheme } from "@mui/material/styles";
 
 const baseTheme = createTheme({
-  shape: {
-    borderRadius: "1px solid #E1ECFC",
-  },
   palette: {
     primary: {
       main: "#2CE080",
@@ -33,7 +30,7 @@ const baseTheme = createTheme({
       margin: "2%",
       fontFamily: "Cera pro",
       FontStyle: "normal",
-      fontWeight:"400",
+      fontWeight: "400",
       LineHeight: "23px",
     },
   },
@@ -44,7 +41,8 @@ const baseTheme = createTheme({
       styleOverrides: {
         root: {
           margin: "0.5% 2.5%",
-          padding: "0 12px",
+          padding: "0px !important",
+          flexGrow: "1",
         },
       },
     },
@@ -66,7 +64,7 @@ const baseTheme = createTheme({
     MuiToolbar: {
       styleOverrides: {
         root: {
-          margin: " 0% 15%",
+          margin: " 0% 23% 0% 15.4%",
         },
       },
     },
@@ -82,6 +80,8 @@ const baseTheme = createTheme({
         root: {
           alignItems: "self-start",
           justifyContent: "flex-start",
+          textTransform: "none",
+  
         },
       },
     },
@@ -89,10 +89,21 @@ const baseTheme = createTheme({
       styleOverrides: {
         root: {
           color: "#0365F2",
-          
+          textTransform: "none",
         },
       },
     },
+    MuiPopover: {
+      styleOverrides: {
+        root: {
+          marginTop: "8px",
+          width: "110%",
+          padding: "0",
+        },
+      },
+    },
+
+    
   },
 });
 

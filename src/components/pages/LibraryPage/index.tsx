@@ -9,11 +9,12 @@ import BlinkistTabs from '../../Organisms/Tabs';
 const MyLibraryPage = () => {
   return (
     <ThemeProvider theme={baseTheme}>
-      <NavBar />
-      <TextHeader children='My Library' />
-      <BlinkistTabs />
-
-      <Footer />
+      {/* <Box> */}
+        <NavBar />
+        <TextHeader children="My Library" />
+        <BlinkistTabs />
+        <Footer />
+      {/* </Box> */}
     </ThemeProvider>
   );
 }

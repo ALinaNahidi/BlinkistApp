@@ -14,6 +14,7 @@ import LinearProgress, {
   linearProgressClasses,
 } from "@mui/material/LinearProgress";
 import AddToLibrary from "../../molecules/AddToLibrary";
+import ReadAndFinished from "../../atoms/ReadandFinishedButton";
 
 
 interface BookCardProps {
@@ -21,6 +22,7 @@ interface BookCardProps {
   title: string;
   author: string;
   typeOfCard?:string;
+  onFinishedClick:(arg: any)=>void;
 }
 
 const useStyles: any = makeStyles((theme: Theme) => ({
@@ -50,62 +52,91 @@ const useStyles: any = makeStyles((theme: Theme) => ({
  
 }));
 
+
+
+
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   height: 15,
   borderRadius: 5,
   [`&.${linearProgressClasses.colorPrimary}`]: {
     backgroundColor:
-      theme.palette.grey[theme.palette.mode === "light" ? 200 : 800],
+      theme.palette.grey[200],
   },
   [`& .${linearProgressClasses.bar}`]: {
     borderRadius: 5,
-    backgroundColor: theme.palette.mode === "light" ? "#E1ECFC" : "#308fe8",
+    backgroundColor: "#E1ECFC",
   },
 }));
 
 
 const  BookCard = (props: BookCardProps) => {
-  const classes = useStyles();
-  const newLocal = props.typeOfCard;
-  return (
-    <Card
-      sx={{
-        width: "284px",
 
-        borderRadius: "10px",
-      }}
-    >
-      <CardMedia
-        component="img"
-        height="294.1"
-        width="292"
-        image={require("../../../Images/book1.png")}
-        alt="Book Cover"
-      />
-      <CardContent>
-        <Box className={classes.titleOfBook}>
-          <TypographyComponent variant="subtitle" children={props.title} />
-        </Box>
-        <Box className={classes.authorName}>
-          <TypographyComponent variant="body1" children={props.author} />
-        </Box>
-        <Box className={classes.Reads}>
-          <BookReadTime />
-          <TotalReads />
-        </Box>
-      </CardContent>
-      {newLocal === "myLibrary" && <AddToLibrary children="Add to library" />}
-      {newLocal === "explore" && (
-        <Box>
-          <CardActions sx={{ display: "flex", justifyContent: "flex-end" }}>
-            <IconButton aria-label="hamburger">
-              <MoreHorizIcon />
-            </IconButton>
-          </CardActions>
-          <BorderLinearProgress variant="determinate" value={30} />
-        </Box>
-      )}
-    </Card>
+
+
+  const classes = useStyles();
+  const typeOfCard = props.typeOfCard;
+  return (
+    <Box sx={{ padding: "15px 35px 20px 0px" }}>
+      <Card
+        sx={{
+          width: "284px",
+          borderRadius: "8px",
+        }}
+      >
+        <CardMedia
+          component="img"
+          height="294.1"
+          width="292"
+          image={require("../../../Images/book1.png")}
+          alt="Book Cover"
+        />
+        <CardContent>
+          <Box className={classes.titleOfBook}>
+            <TypographyComponent variant="subtitle" children={props.title} />
+          </Box>
+          <Box className={classes.authorName}>
+            <TypographyComponent variant="body1" children={props.author} />
+          </Box>
+          <Box className={classes.Reads}>
+            <BookReadTime />
+            <TotalReads />
+          </Box>
+        </CardContent>
+        {typeOfCard === "myLibrary" && (
+          <AddToLibrary children="Add to library" />
+        )}
+        {typeOfCard === "explore" && (
+          <Box>
+            <CardActions sx={{ display: "flex", justifyContent: "flex-end" }}>
+              <IconButton aria-label="hamburger">
+                <MoreHorizIcon />
+              </IconButton>
+            </CardActions>
+            <BorderLinearProgress variant="determinate" value={30} />
+          </Box>
+        )}
+
+        {(typeOfCard === "finished") && (
+          <Box>
+            <ReadAndFinished
+              children="Read again"
+              onFinishedClicked={props.onFinishedClick}
+            />
+            <BorderLinearProgress variant="determinate" value={100} />
+          </Box>
+        )}
+
+        {(typeOfCard === "reading") && (
+          <Box>
+            <ReadAndFinished
+              children="Finished"
+              onFinishedClicked={props.onFinishedClick}
+            />
+            <BorderLinearProgress variant="determinate" value={30} />
+          </Box>
+        )}
+      </Card>
+    </Box>
   );
 }
 

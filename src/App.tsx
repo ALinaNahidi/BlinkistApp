@@ -1,13 +1,22 @@
+import { css, Global } from '@emotion/react';
 import React from 'react';
-
 import MyLibraryPage from './components/pages/LibraryPage';
 
 
 function App() {
   return (
-    <div>
+    <React.Fragment>
+      <Global
+        styles={css`
+          html {
+            margin: 0;
+            padding:0;
+           
+          }
+        `}
+      />
       <MyLibraryPage />
-    </div>
+    </React.Fragment>
   );
 }
 

@@ -6,7 +6,7 @@ import { Box, Button } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { Theme } from "@emotion/react";
 
-interface FinishedandReadAgainProps {
+interface AddToLibraryProps {
   children?: string | JSX.Element;
   variant?: "header" | "title" | "subtitle" | "body" | "caption";
 }
@@ -24,19 +24,24 @@ const useStyles = makeStyles((theme: Theme) => ({
     whiteSpace: "nowrap",
     backgroundColor: "#fff",
     color: "#0365F2",
+    "&:hover": {
+      backgroundColor: "#0365F2",
+      color: "#fff",
+    },
   },
 
 }));
 
-const FinishedandReadAgain = (props: FinishedandReadAgainProps) => {
+const AddToLibrary = (props: AddToLibraryProps) => {
     const classes = useStyles();
  return (
    <Box className={classes.button}>
-     <Button className={classes.button}>
+     <Button className={classes.button} >
+       <AddIcon fontSize="medium" />
        <Typography variant="body1">{props.children}</Typography>
      </Button>
    </Box>
  );
 }
 
-export default FinishedandReadAgain;
+export default AddToLibrary;

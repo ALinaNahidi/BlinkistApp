@@ -6,14 +6,14 @@ import logo from "../../../Images/logo.png";
 const Footer = () => {
 
   return (
-    <footer>
+   
       <Box
-        py={{ xs: 5, sm: 10 }}
+        py={{ xs: 0, sm: 7 }}
         bgcolor="#F1F6F4"
         color="#03314B"
       >
-        <Container maxWidth="xl" sx={{marginLeft:"15%"}}>
-          <Grid container spacing={5}>
+        <Container  sx={{ marginLeft: "16%" }}>
+          <Grid container spacing={2}>
             <Grid xs={12} sm={6}>
               <Box
                 sx={{ height: "24px", marginTop: "10px" }}
@@ -109,7 +109,7 @@ const Footer = () => {
           </Box>
         </Container>
       </Box>
-    </footer>
+   
   );
 };
 

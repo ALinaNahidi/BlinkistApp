@@ -1,18 +1,40 @@
 import * as React from "react";
 
 import Typography from "@mui/material/Typography";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { Theme } from "@emotion/react";
+import { makeStyles } from "@mui/styles";
+import { Link } from "@mui/material";
 
 interface NavItemsProps {
-  children?: string | JSX.Element ;
+  children?: string | JSX.Element;
   variant?: "header" | "title" | "subtitle" | "body" | "caption";
 }
 
-const NavItems = (props: NavItemsProps) => (
-  <div style={{ display: "flex", alignItems: "center" , whiteSpace:"nowrap"}}>
-    <Typography variant="body1">{props.children}</Typography>
-    <KeyboardArrowDownIcon fontSize="medium" />
-  </div>
-);
+const useStyles = makeStyles((theme: Theme) => ({
+  link: {
+    color: "#2CE080",
+    borderBottomWidth: "2px",
+    "&:hover": {
+      textDecorationColor: "red",
+    },
+    display: "flex",
+    alignItems: "center",
+    whiteSpace: "nowrap",
+  },
+}));
 
+const NavItems = (props: NavItemsProps) => {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.link}>
+      <Link color={"secondary"} underline={"hover"}>
+        <Typography variant="body1">{props.children}</Typography>
+      </Link>
+
+      <ExpandMoreIcon color={"secondary"} />
+    </div>
+  );
+};
 export default NavItems;
