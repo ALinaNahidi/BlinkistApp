@@ -64,7 +64,7 @@ const baseTheme = createTheme({
     MuiToolbar: {
       styleOverrides: {
         root: {
-          margin: " 0% 23% 0% 15.4%",
+          margin: " 0% 25% 0% 15%",
         },
       },
     },
@@ -81,14 +81,19 @@ const baseTheme = createTheme({
           alignItems: "self-start",
           justifyContent: "flex-start",
           textTransform: "none",
-  
         },
       },
     },
     MuiButton: {
       styleOverrides: {
+        outlinedPrimary: {
+          color: "#2CE080",
+          borderColor: "black",
+        },
+        containedPrimary: {
+          color: "black",
+        },
         root: {
-          color: "#0365F2",
           textTransform: "none",
         },
       },
@@ -103,7 +108,13 @@ const baseTheme = createTheme({
       },
     },
 
-    
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          color: "red",
+        },
+      },
+    },
   },
 });
 

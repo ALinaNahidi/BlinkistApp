@@ -1,7 +1,6 @@
 
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-// import { ThemeProvider } from "@material-ui/core/styles";
 
 import Button from  ".";
 

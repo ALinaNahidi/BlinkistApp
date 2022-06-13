@@ -33,6 +33,7 @@ const useStyles: any = makeStyles((theme: Theme) => ({
     position: "static",
     
     
+    
   },
 
   ToolBar:{
@@ -75,8 +76,8 @@ const NavBar = () => {
   }
 
   return (
-    <div>
-      <Backdrop open={!backDrop} />
+    <React.Fragment>
+      <Backdrop open={!backDrop} sx={{ zIndex: "1000" }} />
 
       <AppBar className={classes.AppBar} elevation={0}>
         <CssBaseline />
@@ -192,7 +193,7 @@ const NavBar = () => {
           </Toolbar>
         </Container>
       </AppBar>
-    </div>
+    </React.Fragment>
   );
 };
 export default NavBar;

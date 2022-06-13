@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import BookCard from '../BookCard/BasicCard'
 
-interface HomeComponentProps {
+interface TabsandCardStateProps {
   type: string;
   onFinishedClick:(arg:Book)=>void;
   books:Array<Book>;
@@ -21,7 +21,7 @@ type Book = {
   status: string;
 };
 
-const HomeComponent = (props:HomeComponentProps) => {
+const TabsandCardState = (props:TabsandCardStateProps) => {
   const {type} = props
 
   return (
@@ -40,9 +40,7 @@ const HomeComponent = (props:HomeComponentProps) => {
             <BookCard
             key={book.author+book.title}
             onFinishedClick={() => props.onFinishedClick(book)}
-              image={book.imageLink}
-              author={book.author}
-              title={book.title}
+              book={book}
               typeOfCard={props.type} />
             }
           </Box>
@@ -52,4 +50,4 @@ const HomeComponent = (props:HomeComponentProps) => {
   );
 }
 
-export default HomeComponent
+export default TabsandCardState

@@ -1,4 +1,5 @@
 import { Box, Container, Grid, Link } from "@mui/material";
+import React from "react";
 
 import logo from "../../../Images/logo.png";
 
@@ -6,13 +7,9 @@ import logo from "../../../Images/logo.png";
 const Footer = () => {
 
   return (
-   
-      <Box
-        py={{ xs: 0, sm: 7 }}
-        bgcolor="#F1F6F4"
-        color="#03314B"
-      >
-        <Container  sx={{ marginLeft: "16%" }}>
+    <React.Fragment>
+      <Box py={{ xs: 0, sm: 7 }} bgcolor="#F1F6F4" color="#03314B">
+        <Container sx={{ marginLeft: "16%" }}>
           <Grid container spacing={2}>
             <Grid xs={12} sm={6}>
               <Box
@@ -109,7 +106,7 @@ const Footer = () => {
           </Box>
         </Container>
       </Box>
-   
+    </React.Fragment>
   );
 };
 

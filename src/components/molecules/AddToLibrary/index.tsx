@@ -16,17 +16,20 @@ const useStyles = makeStyles((theme: Theme) => ({
     flex: "1",
   },
   button: {
+    
     display: "flex",
     borderTop: "1px #E1ECFC solid",
     padding: "2px",
     justifyContent: "center",
     alignItems: "center",
     whiteSpace: "nowrap",
+    marginTop:"11px",
     backgroundColor: "#fff",
-    color: "#0365F2",
+
+    color: "#0365F2 !important",
     "&:hover": {
       backgroundColor: "#0365F2",
-      color: "#fff",
+      color: "#fff !important",
     },
   },
 
@@ -35,12 +38,16 @@ const useStyles = makeStyles((theme: Theme) => ({
 const AddToLibrary = (props: AddToLibraryProps) => {
     const classes = useStyles();
  return (
-   <Box className={classes.button}>
-     <Button className={classes.button} >
-       <AddIcon fontSize="medium" />
-       <Typography variant="body1">{props.children}</Typography>
-     </Button>
-   </Box>
+   <React.Fragment>
+     <Box className={classes.button}>
+       <Button className={classes.button}>
+         <AddIcon fontSize="medium"  />
+         <Typography variant="body1">
+           {props.children}
+         </Typography>
+       </Button>
+     </Box>
+   </React.Fragment>
  );
 }
 

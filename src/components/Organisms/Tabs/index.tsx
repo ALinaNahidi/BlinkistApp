@@ -4,7 +4,7 @@ import Tab from "@mui/material/Tab";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
-import HomeComponent from "../TabsandCardState/home";
+import TabsandCardState from "../TabsandCardState/home";
 import { makeStyles } from "@mui/styles";
 import { Theme } from "@emotion/react";
 import { getBooks } from "../../../Data/data";
@@ -21,6 +21,13 @@ type Book = {
   readersCount: string;
   status: string;
 };
+
+interface BlinkistTabsProps {
+  book: Book;
+  tab: string;
+}
+
+
 const useStyles = makeStyles((theme: Theme) => ({
   TabBox: {
     margin: "0% 15%",
@@ -34,33 +41,50 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   Tab: {
     width: "25%",
-    paddingLeft:"0px !important",
-    
+    paddingLeft: "0px !important",
   },
 }));
 
-export default function BlinkistTabs() {
+export default function BlinkistTabs(props: BlinkistTabsProps) {
+  console.log(props);
   const [bookObject, setBookObject] = React.useState(getBooks());
 
-  const [value, setValue] = React.useState("1");
-
+  const [value, setValue] = React.useState(props.tab);
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
   };
 
   const classes = useStyles();
 
+  React.useEffect(() => {
+    const {book} = props
+    if (props.tab === "2") {
+     const bookObjectTemp = [...bookObject];
+     var index=-1;
+     for(let i=0; i<bookObjectTemp.length; i++ ){
+        if(bookObjectTemp[i].title===book.title && bookObjectTemp[i].pages===book.pages)
+          index = i;
+     }
+   
+     console.log(index)
+     bookObjectTemp[index] = { ...book };
+
+     bookObjectTemp[index].status === "myLibrary"
+       ? (bookObjectTemp[index].status = "finished")
+       : (bookObjectTemp[index].status = "finished");
+     setBookObject([...bookObjectTemp]);
+     console.log(bookObject);
+    }
+  },[value]);
+
   const handleFinishedClick = (book: Book) => {
-    console.log("from home");
     const bookObjectTemp = [...bookObject];
     const index = bookObjectTemp.indexOf(book);
     bookObjectTemp[index] = { ...book };
 
-    {
-      bookObjectTemp[index].status === "reading"
-        ? (bookObjectTemp[index].status = "finished")
-        : (bookObjectTemp[index].status = "reading");
-    }
+    bookObjectTemp[index].status === "reading"
+      ? (bookObjectTemp[index].status = "finished")
+      : (bookObjectTemp[index].status = "reading");
 
     setBookObject([...bookObjectTemp]);
     console.log(bookObject);
@@ -82,21 +106,22 @@ export default function BlinkistTabs() {
               className={classes.Tab}
             />
             <Tab
-              disableRipple label="Finished"
+              disableRipple
+              label="Finished"
               value="2"
               className={classes.Tab}
             />
           </TabList>
         </Box>
         <TabPanel value="1" className={classes.TabPanel}>
-          <HomeComponent
+          <TabsandCardState
             type="reading"
             onFinishedClick={handleFinishedClick}
             books={bookObject}
           />
         </TabPanel>
         <TabPanel value="2" className={classes.TabPanel}>
-          <HomeComponent
+          <TabsandCardState
             type="finished"
             onFinishedClick={handleFinishedClick}
             books={bookObject}

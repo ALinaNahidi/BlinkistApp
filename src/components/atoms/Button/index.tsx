@@ -9,13 +9,14 @@ interface ButtonProps {
   disabled?: boolean;
   backgroundColor?: string;
   label?: string;
+  varient: "text" | "outlined" | "contained";
 }
 
 const ButtonComponent = (props: ButtonProps) => {
   return (
     <Button
-      variant="contained"
-      color="primary"
+    sx={{ padding:"0 4%"}}
+      variant={props.varient}
       disabled={props.disabled}
       size="medium"
     >

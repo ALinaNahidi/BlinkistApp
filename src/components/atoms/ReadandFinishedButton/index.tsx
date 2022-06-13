@@ -31,7 +31,7 @@ const ReadAndFinished = (props: ReadAndFinishedProps) => {
   return (
     <Box className={classes.button}>
       <Button className={classes.button}  onClick={props.onFinishedClicked} >
-        <Typography variant="body1">{props.children}</Typography>
+        <Typography variant="body1" color="blue">{props.children}</Typography>
       </Button>
     </Box>
   );

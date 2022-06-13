@@ -15,12 +15,24 @@ import LinearProgress, {
 } from "@mui/material/LinearProgress";
 import AddToLibrary from "../../molecules/AddToLibrary";
 import ReadAndFinished from "../../atoms/ReadandFinishedButton";
+import { Link } from "react-router-dom";
 
+type Book = {
+  author: string;
+  country: string;
+  imageLink: string;
+  language: string;
+  link: string;
+  pages: number;
+  title: string;
+  year: number;
+  readTime: string;
+  readersCount: string;
+  status: string;
+};
 
 interface BookCardProps {
-  image: string;
-  title: string;
-  author: string;
+  book:Book;
   typeOfCard?:string;
   onFinishedClick:(arg: any)=>void;
 }
@@ -56,7 +68,7 @@ const useStyles: any = makeStyles((theme: Theme) => ({
 
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
-  height: 15,
+  height: 12,
   borderRadius: 5,
   [`&.${linearProgressClasses.colorPrimary}`]: {
     backgroundColor:
@@ -76,7 +88,7 @@ const  BookCard = (props: BookCardProps) => {
   const classes = useStyles();
   const typeOfCard = props.typeOfCard;
   return (
-    <Box sx={{ padding: "15px 35px 20px 0px" }}>
+    <Box sx={{ padding: "12px 35px 20px 0px" }}>
       <Card
         sx={{
           width: "284px",
@@ -92,10 +104,13 @@ const  BookCard = (props: BookCardProps) => {
         />
         <CardContent>
           <Box className={classes.titleOfBook}>
-            <TypographyComponent variant="subtitle" children={props.title} />
+            <TypographyComponent
+              variant="subtitle"
+              children={props.book.title}
+            />
           </Box>
           <Box className={classes.authorName}>
-            <TypographyComponent variant="body1" children={props.author} />
+            <TypographyComponent variant="body1" children={props.book.author} />
           </Box>
           <Box className={classes.Reads}>
             <BookReadTime />
@@ -103,7 +118,11 @@ const  BookCard = (props: BookCardProps) => {
           </Box>
         </CardContent>
         {typeOfCard === "myLibrary" && (
-          <AddToLibrary children="Add to library" />
+          <Link to="/BookDetailPage" state={{...props.book}} key={props.book.link} style={{textDecoration:"none"}}>
+            <Box>
+              <AddToLibrary children="Add to library" />
+            </Box>  
+          </Link>
         )}
         {typeOfCard === "explore" && (
           <Box>
@@ -116,7 +135,7 @@ const  BookCard = (props: BookCardProps) => {
           </Box>
         )}
 
-        {(typeOfCard === "finished") && (
+        {typeOfCard === "finished" && (
           <Box>
             <ReadAndFinished
               children="Read again"
@@ -126,7 +145,7 @@ const  BookCard = (props: BookCardProps) => {
           </Box>
         )}
 
-        {(typeOfCard === "reading") && (
+        {typeOfCard === "reading" && (
           <Box>
             <ReadAndFinished
               children="Finished"
