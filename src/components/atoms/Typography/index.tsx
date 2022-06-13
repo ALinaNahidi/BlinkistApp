@@ -27,7 +27,11 @@ const getMappedVariant = (variant: string) => {
 };
 
 const TypographyComponent = (props: TypographyComponentProps) => (
-  <Typography variant={getMappedVariant(props.variant)} sx={{whiteSpace:"nowrap", padding:0}}   >
+  <Typography
+    variant={getMappedVariant(props.variant)}
+    sx={{ whiteSpace: "nowrap", padding: 0 }}
+   
+  >
     {props.children}
   </Typography>
 );

@@ -29,7 +29,22 @@ import { Link } from "react-router-dom";
 
 interface ExploreDropDownProps {
   onExplore: (arg: boolean) => void;
+  bookObject:Array<Book>;
 }
+type Book = {
+  author: string;
+  country: string;
+  imageLink: string;
+  language: string;
+  link: string;
+  pages: number;
+  title: string;
+  year: number;
+  readTime: string;
+  readersCount: string;
+  status: string;
+};
+
 const useStyles: any = makeStyles((theme: Theme) => ({
   ListItem: {
     color: "black !important",
@@ -176,6 +191,7 @@ const ExploreDropDown = (props: ExploreDropDownProps) => {
                             <NotificationsNoneOutlinedIcon />
                             <Link
                               to={"/entrepeneuship"}
+                              state={ props.bookObject }
                               className={classes.ListItem}
                             >
                               <Typography

@@ -23,7 +23,7 @@ type Book = {
 
 const TabsandCardState = (props:TabsandCardStateProps) => {
   const {type} = props
-
+console.log(props.books)
   return (
     <Box
       sx={{
@@ -41,7 +41,8 @@ const TabsandCardState = (props:TabsandCardStateProps) => {
             key={book.author+book.title}
             onFinishedClick={() => props.onFinishedClick(book)}
               book={book}
-              typeOfCard={props.type} />
+              typeOfCard={props.type} 
+              bookObject={props.books}/>
             }
           </Box>
         );

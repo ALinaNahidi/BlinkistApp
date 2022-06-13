@@ -30,8 +30,14 @@ const ReadAndFinished = (props: ReadAndFinishedProps) => {
   const classes = useStyles();
   return (
     <Box className={classes.button}>
-      <Button className={classes.button}  onClick={props.onFinishedClicked} >
-        <Typography variant="body1" color="blue">{props.children}</Typography>
+      <Button
+        className={classes.button}
+        onClick={props.onFinishedClicked}
+        disableRipple={true}
+      >
+        <Typography variant="body1" color="blue">
+          {props.children}
+        </Typography>
       </Button>
     </Box>
   );

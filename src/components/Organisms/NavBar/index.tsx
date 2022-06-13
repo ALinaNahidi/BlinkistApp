@@ -20,25 +20,38 @@ import NavItems from "../../molecules/NavItems";
 import ExploreDropDown from "../ExploreDropDown";
 import { Backdrop, CssBaseline } from "@mui/material";
 
+type Book = {
+  author: string;
+  country: string;
+  imageLink: string;
+  language: string;
+  link: string;
+  pages: number;
+  title: string;
+  year: number;
+  readTime: string;
+  readersCount: string;
+  status: string;
+};
+interface NavBarProp {
+  bookObject: Array<Book>;
+}
+
 const useStyles: any = makeStyles((theme: Theme) => ({
   logo: {
     width: "124.09px",
     height: "26px",
   },
 
-
   AppBar: {
-   padding:"0px !important ",
+    padding: "0px !important ",
     border: "none",
     position: "static",
-    
-    
-    
   },
 
-  ToolBar:{
-    padding:"0px !important"
-  }
+  ToolBar: {
+    padding: "0px !important",
+  },
 }));
 
 const pages = [
@@ -47,8 +60,7 @@ const pages = [
   // <TypographyComponent variant="body1" children="My Library" />,
 ];
 
-
-const NavBar = () => {
+const NavBar = (props: NavBarProp) => {
   const classes = useStyles();
 
   const [anchorElNav, setAnchorElNav] =
@@ -57,7 +69,7 @@ const NavBar = () => {
   const [anchorElUser, setAnchorElUser] =
     React.useState<null | HTMLElement>(null);
 
-  const [backDrop, setBackDrop] = React.useState(true)
+  const [backDrop, setBackDrop] = React.useState(true);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -70,10 +82,10 @@ const NavBar = () => {
     setAnchorElNav(null);
   };
 
-  const handleBackDrop= (iconVariable:boolean) =>{
-    setBackDrop(iconVariable)
-    console.log(backDrop)
-  }
+  const handleBackDrop = (iconVariable: boolean) => {
+    setBackDrop(iconVariable);
+    console.log(backDrop);
+  };
 
   return (
     <React.Fragment>
@@ -161,7 +173,10 @@ const NavBar = () => {
                   fontSize: "16px",
                 }}
               >
-                <ExploreDropDown onExplore={handleBackDrop} />
+                <ExploreDropDown
+                  onExplore={handleBackDrop}
+                  bookObject={props.bookObject}
+                />
               </Button>
               <Button
                 onClick={handleCloseNavMenu}

@@ -20,15 +20,17 @@ type Book = {
 
 interface LocationState{  
     book:Book;
+    bookObject:Array<Book>;
 }
-
 const BookDetailPage = () => {
     const {state} = useLocation();
-    const book = state as Book;
+    const {book,bookObject} = state as LocationState ;
+    
+
   return (
     <React.Fragment>
-      <NavBar />
-      <BookDetailComponent book={book} />
+      <NavBar bookObject={bookObject}/>
+      <BookDetailComponent book={book} bookObject={bookObject} />
       <Footer />
     </React.Fragment>
   );

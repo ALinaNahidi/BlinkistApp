@@ -95,6 +95,7 @@ const baseTheme = createTheme({
         },
         root: {
           textTransform: "none",
+        
         },
       },
     },

@@ -5,6 +5,13 @@ import { makeStyles } from "@mui/styles";
 import { Theme } from "@emotion/react";
 import { getBooks } from "../../../Data/data";
 import {SubHeader} from "../../atoms/TextHeader";
+import DataContext from "../../../context/dataContext";
+
+interface EntrepeneushipComponentProp{
+  bookObject: Array<Book>;
+}
+
+
 type Book = {
   author: string;
   country: string;
@@ -35,30 +42,17 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }));
 
-export default function EntrepeneushipPageComponent() {
-  const [bookObject, setBookObject] = React.useState(getBooks());
+export default function EntrepeneushipPageComponent(props:EntrepeneushipComponentProp) {
+ 
 
-  const [value, setValue] = React.useState("1");
-
-  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
-    setValue(newValue);
-  };
-
+ const {bookObject} = props;
   const classes = useStyles();
 
   const handleFinishedClick = (book: Book) => {
     console.log("from home");
-    const bookObjectTemp = [...bookObject];
-    const index = bookObjectTemp.indexOf(book);
-    bookObjectTemp[index] = { ...book };
-
-    bookObjectTemp[index].status === "myLibrary"
-      ? (bookObjectTemp[index].status = "reading")
-      : (bookObjectTemp[index].status = "reading");
-
-    setBookObject([...bookObjectTemp]);
-    console.log(bookObject);
+    
   };
+  console.log(bookObject)
 
   return (
     <Box>
@@ -78,6 +72,7 @@ export default function EntrepeneushipPageComponent() {
           onFinishedClick={handleFinishedClick}
           books={bookObject}
           limit={bookObject.length > 3 ? 3 : bookObject.length}
+    
         />
       </Box>
 
@@ -88,6 +83,7 @@ export default function EntrepeneushipPageComponent() {
           onFinishedClick={handleFinishedClick}
           books={bookObject}
           limit={bookObject.length > 3 ? 3 : bookObject.length}
+    
         />
       </Box>
     </Box>

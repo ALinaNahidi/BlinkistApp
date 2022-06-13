@@ -24,6 +24,7 @@ type Book = {
 
 interface BookDetailComponentProps {
   book: Book;
+  bookObject:Array<Book>;
 }
 
 const useStyles: any = makeStyles((theme: Theme) => ({
@@ -46,8 +47,10 @@ const useStyles: any = makeStyles((theme: Theme) => ({
     marginTop: "8%",
     display: "flex",
     flexDirection: "row",
-    alignItems: "left",
+    alignItems: "center",
     justifyContent: "space-between",
+    justifyItems:"center",
+
   },
 
   margins: {
@@ -85,7 +88,7 @@ const BookDetailComponent = (props: BookDetailComponentProps) => {
           <Box className={classes.margins} color="secondary">
             <TypographyComponent children={book.title} variant="header" />
           </Box>
-          <Box className={classes.margins}>
+          <Box className={classes.margins} color="gray">
             <TypographyComponent
               children={
                 book.country.toString() + " " + book.language.toString()
@@ -93,7 +96,7 @@ const BookDetailComponent = (props: BookDetailComponentProps) => {
               variant="h5"
             />
           </Box>
-          <Box className={classes.margins}>
+          <Box className={classes.margins} color="gray">
             {" "}
             <TypographyComponent children={book.author} variant="subtitle" />
           </Box>
@@ -106,13 +109,22 @@ const BookDetailComponent = (props: BookDetailComponentProps) => {
               title="Read now"
               varient="outlined"
             ></ButtonComponent>
-            <Link to="/" state={{"book":{...props.book}, tab:"2"}} key={props.book.link} style={{textDecoration:"none"}}>
-          
+
+            <Link
+              to="/"
+              state={{ "book": props.book, "tab": "2","bookObject":props.bookObject}}
+              key={props.book.link}
+              style={{
+                textDecoration: "none",
+                whiteSpace: "nowrap",
+              }}
+            >
               <ButtonComponent
                 title="Finished Reading"
                 varient="contained"
               ></ButtonComponent>
             </Link>
+
             <TypographyComponent
               children="Send to Kindle ->"
               variant="caption"
@@ -154,14 +166,14 @@ const BookDetailComponent = (props: BookDetailComponentProps) => {
               <TabPanel value="1" className={classes.tab}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
+                text ever since galley of type and scrambled it to make a type
+                specimen book.
               </TabPanel>
               <TabPanel value="2" className={classes.tab}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
+                of the printing and typesetting industry. Lorem Ipsum has been
+                the industry's standard dummy text ever since the 1500s, when an
+                unknown printer took a galley of type and scrambled it to make a
+                type specimen book.
               </TabPanel>
               <TabPanel value="3" className={classes.tab}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting

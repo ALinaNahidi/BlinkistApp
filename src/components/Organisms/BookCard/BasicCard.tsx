@@ -32,9 +32,10 @@ type Book = {
 };
 
 interface BookCardProps {
-  book:Book;
-  typeOfCard?:string;
-  onFinishedClick:(arg: any)=>void;
+  book: Book;
+  typeOfCard?: string;
+  onFinishedClick: (arg: any) => void;
+  bookObject:Array<Book>;
 }
 
 const useStyles: any = makeStyles((theme: Theme) => ({
@@ -60,19 +61,13 @@ const useStyles: any = makeStyles((theme: Theme) => ({
     whiteSpace: "nowrap",
     paddingBottom: "6px",
   },
-
- 
 }));
-
-
-
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   height: 12,
   borderRadius: 5,
   [`&.${linearProgressClasses.colorPrimary}`]: {
-    backgroundColor:
-      theme.palette.grey[200],
+    backgroundColor: theme.palette.grey[200],
   },
   [`& .${linearProgressClasses.bar}`]: {
     borderRadius: 5,
@@ -80,11 +75,7 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   },
 }));
 
-
-const  BookCard = (props: BookCardProps) => {
-
-
-
+const BookCard = (props: BookCardProps) => {
   const classes = useStyles();
   const typeOfCard = props.typeOfCard;
   return (
@@ -118,10 +109,15 @@ const  BookCard = (props: BookCardProps) => {
           </Box>
         </CardContent>
         {typeOfCard === "myLibrary" && (
-          <Link to="/BookDetailPage" state={{...props.book}} key={props.book.link} style={{textDecoration:"none"}}>
+          <Link
+            to="/BookDetailPage"
+            state={{ "book": props.book,"bookObject":props.bookObject }}
+            key={props.book.link}
+            style={{ textDecoration: "none" }}
+          >
             <Box>
               <AddToLibrary children="Add to library" />
-            </Box>  
+            </Box>
           </Link>
         )}
         {typeOfCard === "explore" && (
@@ -157,6 +153,6 @@ const  BookCard = (props: BookCardProps) => {
       </Card>
     </Box>
   );
-}
+};
 
-export default  BookCard;
+export default BookCard;

@@ -6,6 +6,7 @@ interface CardStateTrendingProps {
   onFinishedClick: (arg: Book) => void;
   books: Array<Book>;
   limit: number;
+  
 }
 
 type Book = {
@@ -24,11 +25,12 @@ type Book = {
 
 const CardStateTrending = (props: CardStateTrendingProps) => {
   const { type, limit } = props;
-  var count =0;
+  var count = 0;
 
   const handleCount = () => {
     count+=1
   };
+  console.log(props.books);
   return (
     <Box
       sx={{
@@ -48,12 +50,11 @@ const CardStateTrending = (props: CardStateTrendingProps) => {
                 onFinishedClick={() => props.onFinishedClick(book)}
                 book={book}
                 typeOfCard={status}
+                bookObject={props.books}
               />
             </Box>
           );
-           
         }
-       
       })}
     </Box>
   );

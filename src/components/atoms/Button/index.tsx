@@ -15,7 +15,8 @@ interface ButtonProps {
 const ButtonComponent = (props: ButtonProps) => {
   return (
     <Button
-    sx={{ padding:"0 4%"}}
+    disableRipple={true}
+    sx={{textDecoration:"none"}}
       variant={props.varient}
       disabled={props.disabled}
       size="medium"

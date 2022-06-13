@@ -14,7 +14,6 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<MyLibraryPage />} />
-
           <Route path="BookDetailPage" element={<BookDetailPage />} />
           <Route path="entrepeneuship" element={<EnterpeneushipPage />} />
         </Routes>
