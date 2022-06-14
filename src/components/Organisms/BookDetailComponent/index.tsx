@@ -24,7 +24,7 @@ type Book = {
 
 interface BookDetailComponentProps {
   book: Book;
-  bookObject:Array<Book>;
+  bookObject: Array<Book>;
 }
 
 const useStyles: any = makeStyles((theme: Theme) => ({
@@ -33,7 +33,7 @@ const useStyles: any = makeStyles((theme: Theme) => ({
     alignItems: "initial",
     justifyContent: "space-between",
     justifyItems: "center",
-    
+
     margin: "2% 23% 4% 15% ",
   },
   rightBlock: {
@@ -49,8 +49,7 @@ const useStyles: any = makeStyles((theme: Theme) => ({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    justifyItems:"center",
-
+    justifyItems: "center",
   },
 
   margins: {
@@ -112,7 +111,11 @@ const BookDetailComponent = (props: BookDetailComponentProps) => {
 
             <Link
               to="/"
-              state={{ "book": props.book, "tab": "2","bookObject":props.bookObject}}
+              state={{
+                book: props.book,
+                tab: "2",
+                bookObjectFromState: props.bookObject,
+              }}
               key={props.book.link}
               style={{
                 textDecoration: "none",

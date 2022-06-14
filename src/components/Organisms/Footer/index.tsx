@@ -1,24 +1,47 @@
+import { Theme } from "@emotion/react";
 import { Box, Container, Grid, Link } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 import React from "react";
 
 import logo from "../../../Images/logo.png";
+import TypographyComponent from "../../atoms/Typography";
+
+
+const useStyles: any = makeStyles((theme: Theme) => ({
+  title: {
+    fontSize: "16px",
+    color: "#03314B",
+  },
+
+  links: {
+    fontSize: "16px",
+    color: "#6D787E",
+    marginTop:"15px",
+    padding:"0",
+  },
+
+  quote:{
+    fontSize:"24px",
+    color:"blue"
+  }
+}));
 
 
 const Footer = () => {
-
+const classes = useStyles();
   return (
     <React.Fragment>
       <Box py={{ xs: 0, sm: 7 }} bgcolor="#F1F6F4" color="#03314B">
         <Container sx={{ marginLeft: "16%" }}>
           <Grid container spacing={2}>
-            <Grid xs={12} sm={6}>
+            <Grid xs={12} sm={5}>
               <Box
                 sx={{ height: "24px", marginTop: "10px" }}
                 component="img"
                 src={logo}
                 alt="logo"
               ></Box>
-              <Box>
+              <Box className={classes.quote}>
                 <h4>
                   Big ideas in small packages
                   <br /> Start learnign now
@@ -26,82 +49,84 @@ const Footer = () => {
               </Box>
             </Grid>
             <Grid item xs={12} sm={2}>
-              <Box sx={{ height: "24px" }}>Editorial</Box>
-              <Box>
-                <Link href="/" color="inherit">
+              <Box className={classes.title}>Editorial</Box>
+              <Box className={classes.links}>
+                <TypographyComponent variant="body1">
                   Book Lists
-                </Link>
+                </TypographyComponent>
               </Box>
-              <Box>
-                <Link href="/" color="inherit">
+              <Box className={classes.links}>
+                <TypographyComponent variant="body1">
                   Waht is Nonfiction?
-                </Link>
+                </TypographyComponent>
               </Box>
-              <Box>
-                <Link href="/" color="inherit">
+              <Box className={classes.links}>
+                <TypographyComponent variant="body1">
                   What to read next?
-                </Link>
+                </TypographyComponent>
               </Box>
-              <Box>
-                <Link href="/" color="inherit">
+              <Box className={classes.links}>
+                <TypographyComponent variant="body1">
                   Benefits of reading
-                </Link>
+                </TypographyComponent>
               </Box>
             </Grid>
             <Grid item xs={12} sm={2}>
-              <Box sx={{ height: "24px" }}>Useful Links</Box>
-              <Box>
-                <Link href="/" color="inherit">
+              <Box className={classes.title}>Useful links</Box>
+              <Box className={classes.links}>
+                <TypographyComponent variant="body1">
                   Pricing
-                </Link>
+                </TypographyComponent>
               </Box>
-              <Box>
-                <Link href="/" color="inherit">
+              <Box className={classes.links}>
+                <TypographyComponent variant="body1">
                   Blinkist business
-                </Link>
+                </TypographyComponent>
               </Box>
-              <Box>
-                <Link href="/" color="inherit">
+              <Box className={classes.links}>
+                <TypographyComponent variant="body1">
                   Gift cards
-                </Link>
+                </TypographyComponent>
               </Box>
-              <Box>
-                <Link href="/" color="inherit">
+              <Box className={classes.links}>
+                <TypographyComponent variant="body1">
                   Blinkist magaine
-                </Link>
+                </TypographyComponent>
               </Box>
-              <Box>
-                <Link href="/" color="inherit">
+              <Box className={classes.links}>
+                <TypographyComponent variant="body1">
                   Contact & help
-                </Link>
+                </TypographyComponent>
               </Box>
             </Grid>
             <Grid item xs={12} sm={2}>
-              <Box sx={{ height: "24px" }}>Company</Box>
-              <Box>
-                <Link href="/" color="inherit">
-                  About
-                </Link>
+              <Box className={classes.title}>Company</Box>
+              <Box className={classes.links}>
+                <TypographyComponent variant="body1">About</TypographyComponent>
               </Box>
-              <Box>
-                <Link href="/" color="inherit">
+              <Box className={classes.links}>
+                <TypographyComponent variant="body1">
                   Careers
-                </Link>
+                </TypographyComponent>
               </Box>
-              <Box>
-                <Link href="/" color="inherit">
+              <Box className={classes.links}>
+                <TypographyComponent variant="body1">
                   Partners
-                </Link>
+                </TypographyComponent>
               </Box>
-              <Box>
-                <Link href="/" color="inherit">
+              <Box className={classes.links}>
+                <TypographyComponent variant="body1">
                   Code of Conduct
-                </Link>
+                </TypographyComponent>
               </Box>
             </Grid>
           </Grid>
-          <Box pt={{ xs: 5, sm: 10 }} pb={{ xs: 5, sm: 0 }}>
-            &reg; Blinklist 2021 sitemap | imprint | Terms of Service | Privicy
+          <Box
+            pt={{ xs: 5, sm: 10 }}
+            pb={{ xs: 5, sm: 0 }}
+            className={classes.links}
+          >
+            &reg; Blinkist 2021 sitemap | imprint | Terms of Service | Privicy
             Policies
           </Box>
         </Container>

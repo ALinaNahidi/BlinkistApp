@@ -1,16 +1,16 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import CardStateTrending from "./cardState"
+import CardStateTrending from "./cardState";
 import { makeStyles } from "@mui/styles";
 import { Theme } from "@emotion/react";
 import { getBooks } from "../../../Data/data";
-import {SubHeader} from "../../atoms/TextHeader";
+import { SubHeader } from "../../atoms/TextHeader";
 import DataContext from "../../../context/dataContext";
+import { useNavigate } from "react-router-dom";
 
-interface EntrepeneushipComponentProp{
+interface EntrepeneushipComponentProp {
   bookObject: Array<Book>;
 }
-
 
 type Book = {
   author: string;
@@ -42,17 +42,20 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }));
 
-export default function EntrepeneushipPageComponent(props:EntrepeneushipComponentProp) {
- 
-
- const {bookObject} = props;
+export default function EntrepeneushipPageComponent(
+  props: EntrepeneushipComponentProp
+) {
+  const { bookObject } = props;
   const classes = useStyles();
+  let navigate = useNavigate();
 
   const handleFinishedClick = (book: Book) => {
-    console.log("from home");
-    
+    console.log("from enreprenuship page");
+    console.log(book);
+    navigate("/", {
+      state: { "tab": "2", "book": book, "bookObjectFromState": props.bookObject },
+    });
   };
-  console.log(bookObject)
 
   return (
     <Box>
@@ -72,7 +75,6 @@ export default function EntrepeneushipPageComponent(props:EntrepeneushipComponen
           onFinishedClick={handleFinishedClick}
           books={bookObject}
           limit={bookObject.length > 3 ? 3 : bookObject.length}
-    
         />
       </Box>
 
@@ -83,7 +85,6 @@ export default function EntrepeneushipPageComponent(props:EntrepeneushipComponen
           onFinishedClick={handleFinishedClick}
           books={bookObject}
           limit={bookObject.length > 3 ? 3 : bookObject.length}
-    
         />
       </Box>
     </Box>

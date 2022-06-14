@@ -24,7 +24,7 @@ type Book = {
 const EnterpeneushipPage = () => {
   const { state } = useLocation();
   const bookObject = state as Array<Book>;
-  console.log(state)
+  console.log(bookObject)
   return (
     <React.Fragment>
       <NavBar bookObject={bookObject} />

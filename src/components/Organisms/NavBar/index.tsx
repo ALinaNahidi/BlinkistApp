@@ -165,6 +165,7 @@ const NavBar = (props: NavBarProp) => {
                 <SearchIcon />
               </Button>
               <Button
+                disableRipple={true}
                 onClick={handleCloseNavMenu}
                 sx={{
                   my: 2,
@@ -179,6 +180,7 @@ const NavBar = (props: NavBarProp) => {
                 />
               </Button>
               <Button
+                disableRipple={true}
                 onClick={handleCloseNavMenu}
                 sx={{
                   my: 2,
@@ -195,7 +197,11 @@ const NavBar = (props: NavBarProp) => {
               <Tooltip title="Open settings">
                 <NavItems
                   children={
-                    <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                    <IconButton
+                      disableRipple={true}
+                      onClick={handleOpenUserMenu}
+                      sx={{ p: 0 }}
+                    >
                       <Avatar
                         alt="Remy Sharp"
                         src="/static/images/avatar/2.jpg"

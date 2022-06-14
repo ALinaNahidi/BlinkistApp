@@ -16,39 +16,48 @@ const useStyles = makeStyles((theme: Theme) => ({
     flex: "1",
   },
   button: {
-    
     display: "flex",
+    flexGrow: 1,
     borderTop: "1px #E1ECFC solid",
     padding: "2px",
     justifyContent: "center",
     alignItems: "center",
     whiteSpace: "nowrap",
-    marginTop:"11px",
+    marginTop: "11px",
     backgroundColor: "#fff",
+    color: "blue !important",
 
-    color: "#0365F2 !important",
     "&:hover": {
-      backgroundColor: "#0365F2",
       color: "#fff !important",
+ 
     },
   },
 
+  buttonBox: {
+    display: "flex",
+    zIndex: "0",
+    justifyContent: "center",
+    alignItems: "center",
+    "&:hover": {
+      backgroundColor: "blue",
+      color: "#fff !important",
+      fontWeight: "500 !important",
+    },
+  },
 }));
 
 const AddToLibrary = (props: AddToLibraryProps) => {
-    const classes = useStyles();
- return (
-   <React.Fragment>
-     <Box className={classes.button}>
-       <Button className={classes.button}>
-         <AddIcon fontSize="medium"  />
-         <Typography variant="body1">
-           {props.children}
-         </Typography>
-       </Button>
-     </Box>
-   </React.Fragment>
- );
-}
+  const classes = useStyles();
+  return (
+    <React.Fragment>
+      <Box className={classes.buttonBox}>
+        <Button className={classes.button}>
+          <AddIcon fontSize="medium" />
+          <Typography variant="body1">{props.children}</Typography>
+        </Button>
+      </Box>
+    </React.Fragment>
+  );
+};
 
 export default AddToLibrary;
