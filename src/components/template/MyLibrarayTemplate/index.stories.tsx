@@ -23,6 +23,17 @@ const Template: ComponentStory<typeof MyLibraryTemplate> = (args) => (
   </ThemeProvider>
 );
 
+const DummyView = (props:any) => (
+  <div style={{ backgroundColor: props.color, height: props.height }}></div>
+);
+
+export const EmptyView = Template.bind({});
+EmptyView.args = {
+  blinkistTabs: <DummyView color="pink" height="80vh" />,
+  header: <DummyView color="aqua" height="30vh" />,
+
+};
+
 export const HomePage = Template.bind({});
 HomePage.args = {
 
