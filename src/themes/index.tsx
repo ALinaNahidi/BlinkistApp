@@ -64,7 +64,7 @@ const baseTheme = createTheme({
     MuiToolbar: {
       styleOverrides: {
         root: {
-          margin: " 0% 25% 0% 15%",
+          margin: "0% 25% 0% 15%",
         },
       },
     },

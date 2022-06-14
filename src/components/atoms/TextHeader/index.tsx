@@ -9,7 +9,7 @@ interface TextHeaderComponentProps {
 const TextHeader = (props: TextHeaderComponentProps) => {
   return (
     <React.Fragment>
-      <Typography color="#03314B" sx={{ margin: "8% 15% 4%", padding:"0 12px" }} variant={props.varient}>
+      <Typography color="#03314B" sx={{ margin: "8% 0% 4%", padding:"0 12px" }} variant={props.varient}>
         {props.children}
       </Typography>
     </React.Fragment>
@@ -21,7 +21,7 @@ export const SubHeader = (props: TextHeaderComponentProps) => {
     <React.Fragment>
       <Typography
         color="#03314B"
-        sx={{ margin: "4% 15% 4%", padding: "0 12px" }}
+        sx={{ margin: "4% 0% 4%", padding: "0 12px" }}
         variant={props.varient}
       >
         {props.children}

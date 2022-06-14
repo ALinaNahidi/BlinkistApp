@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     alignItems: "center",
     whiteSpace: "nowrap",
     backgroundColor: "#fff",
-    color: "#0365F2",
+    color: "#0365F2 !important",
     
   },
 }));

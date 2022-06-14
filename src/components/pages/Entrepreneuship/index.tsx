@@ -6,6 +6,7 @@ import image from "../../../Images/explore.png"
 import { CardMedia } from '@mui/material';
 import TextFieldSearch from '../../molecules/TextFieldSearch';
 import { useLocation } from 'react-router-dom';
+import EntrepeneushipTemplate from '../../template/EntrepeneushipPage';
 type Book = {
   author: string;
   country: string;
@@ -28,13 +29,20 @@ const EnterpeneushipPage = () => {
   return (
     <React.Fragment>
       <NavBar bookObject={bookObject} />
-      <CardMedia
-        sx={{ margin: "6% 17% 0% 15%", width: "912px", height: "264px" }}
-        image={image}
-        title="Paella dish"
+      <EntrepeneushipTemplate
+        image={
+          <CardMedia
+            sx={{ margin: "10% 0% 5%", width: "912px", height: "264px" }}
+            image={image}
+            title="Paella dish"
+          />
+        }
+        searchBar={<TextFieldSearch />}
+        entrepeneushipComponent={
+          <EntrepeneushipPageComponent bookObject={bookObject} />
+        }
       />
-      <TextFieldSearch />
-      <EntrepeneushipPageComponent bookObject={bookObject} />
+
       <Footer />
     </React.Fragment>
   );

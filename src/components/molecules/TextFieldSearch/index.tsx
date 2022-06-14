@@ -7,7 +7,7 @@ const TextFieldSearch = () => {
   return (
     <Box>
       <TextField
-        sx={{ margin: "2% 15% 0%", width: "598px"}}
+        sx={{ margin: "2% 0%", width: "598px"}}
         
         id="input-with-icon-textfield"
         placeholder="Search by title or author"

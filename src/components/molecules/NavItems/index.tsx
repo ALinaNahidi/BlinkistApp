@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Theme } from "@emotion/react";
 import { makeStyles } from "@mui/styles";
-import { Box, Link } from "@mui/material";
+import { Box } from "@mui/material";
 
 interface NavItemsProps {
   children?: string | JSX.Element;
@@ -29,8 +29,10 @@ const NavItems = (props: NavItemsProps) => {
 
   return (
     <div className={classes.link}>
-      <Box >
-        <Typography variant="body1">{props.children}</Typography>
+      <Box>
+        <Typography variant="body1" color={"secondary"}>
+          {props.children}
+        </Typography>
       </Box>
 
       <ExpandMoreIcon color={"secondary"} />

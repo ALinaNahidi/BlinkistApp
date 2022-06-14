@@ -1,17 +1,20 @@
-
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
+import baseTheme from "../../../themes";
 
-import Button from  ".";
+import { ThemeProvider } from "@emotion/react";
+import ButtonComponent from ".";
 
-const ButtonComponent = {
+const ButtonComponentStory = {
   title: "ButtonComponent",
-  component: Button,
-} as ComponentMeta<typeof Button>;
+  component: ButtonComponent,
+} as ComponentMeta<typeof ButtonComponent>;
 
-
-
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const Template: ComponentStory<typeof ButtonComponent> = (args) => (
+  <ThemeProvider theme={baseTheme}>
+    <ButtonComponent {...args} />
+  </ThemeProvider>
+);
 
 export const PrimaryButtonActive = Template.bind({});
 PrimaryButtonActive.args = {
@@ -24,4 +27,10 @@ PrimaryButtonDisabled.args = {
   disabled: true,
 };
 
-export default ButtonComponent;
+export const ContainedButton = Template.bind({});
+ContainedButton.args = {
+  title: "Contained Button",
+  varient:"contained"
+};
+
+export default ButtonComponentStory;

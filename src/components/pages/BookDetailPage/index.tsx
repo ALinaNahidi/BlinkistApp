@@ -3,6 +3,7 @@ import Footer from "../../Organisms/Footer";
 import NavBar from "../../Organisms/NavBar";
 import { useLocation } from "react-router-dom";
 import BookDetailComponent from "../../Organisms/BookDetailComponent";
+import BookDetailTemplate from "../../template/BookDetailTemplate";
 
 type Book = {
   author: string;
@@ -18,19 +19,23 @@ type Book = {
   status: string;
 };
 
-interface LocationState{  
-    book:Book;
-    bookObject:Array<Book>;
+interface LocationState {
+  book: Book;
+  bookObject: Array<Book>;
 }
 const BookDetailPage = () => {
-    const {state} = useLocation();
-    const {book,bookObject} = state as LocationState ;
-
+  const { state } = useLocation();
+  const { book, bookObject } = state as LocationState;
 
   return (
     <React.Fragment>
       <NavBar bookObject={bookObject} />
-      <BookDetailComponent book={book} bookObject={bookObject} />
+      <BookDetailTemplate
+        bookDetailComponent={
+          <BookDetailComponent book={book} bookObject={bookObject} />
+        }
+      />
+
       <Footer />
     </React.Fragment>
   );

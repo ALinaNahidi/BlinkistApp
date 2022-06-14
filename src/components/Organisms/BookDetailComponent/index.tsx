@@ -33,8 +33,6 @@ const useStyles: any = makeStyles((theme: Theme) => ({
     alignItems: "initial",
     justifyContent: "space-between",
     justifyItems: "center",
-
-    margin: "2% 23% 4% 15% ",
   },
   rightBlock: {
     display: "flex",
@@ -58,6 +56,11 @@ const useStyles: any = makeStyles((theme: Theme) => ({
   tab: {
     paddingLeft: "0px !important",
   },
+
+  textTop: {
+    marginLeft: "0 !important",
+    margin: "10% 0% 5%",
+  },
 }));
 
 const CustomTab = withStyles({
@@ -76,10 +79,10 @@ const BookDetailComponent = (props: BookDetailComponentProps) => {
   };
   return (
     <React.Fragment>
-      <Box sx={{ margin: "7% 23% 0% 14%" }}>
+      <Box className={classes.textTop}>
         <TypographyComponent
           children="Get the key ideas from"
-          variant="caption"
+          variant="subtitle"
         />
       </Box>
       <Box className={classes.detail}>

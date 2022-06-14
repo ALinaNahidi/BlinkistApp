@@ -3,9 +3,7 @@ import Box from "@mui/material/Box";
 import CardStateTrending from "./cardState";
 import { makeStyles } from "@mui/styles";
 import { Theme } from "@emotion/react";
-import { getBooks } from "../../../Data/data";
 import { SubHeader } from "../../atoms/TextHeader";
-import DataContext from "../../../context/dataContext";
 import { useNavigate } from "react-router-dom";
 
 interface EntrepeneushipComponentProp {
@@ -27,13 +25,11 @@ type Book = {
 };
 const useStyles = makeStyles((theme: Theme) => ({
   TabBox: {
-    margin: "0% 15%",
     padding: "0 12px",
     borderBottom: "0",
     borderColor: "divider",
   },
   TabPanel: {
-    margin: "0% 15%",
     padding: "0 12px",
   },
   Tab: {
@@ -53,7 +49,7 @@ export default function EntrepeneushipPageComponent(
     console.log("from enreprenuship page");
     console.log(book);
     navigate("/", {
-      state: { "tab": "2", "book": book, "bookObjectFromState": props.bookObject },
+      state: { tab: "2", book: book, bookObjectFromState: props.bookObject },
     });
   };
 
