@@ -1,12 +1,10 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-
-
 import AddToLibrary from ".";
 import { ThemeProvider } from "@emotion/react";
 import baseTheme from "../../../themes";
 const AddToLibraryComponent = {
-  title: "AddToLibraryComponent",
+  title: "Design System/Molecules/AddToLibraryComponent",
   component: AddToLibrary,
 } as ComponentMeta<typeof AddToLibrary>;
 

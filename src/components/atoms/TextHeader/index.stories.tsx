@@ -1,13 +1,12 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import Typography from ".";
 import TextHeader from ".";
 import { ThemeProvider } from "@emotion/react";
 import baseTheme from "../../../themes";
 
 const TextHeaderStory = {
-  title: "TextHeaderStory",
+  title: "Design System/Atoms/TextHeaderStory",
   component: TextHeader,
 } as ComponentMeta<typeof TextHeader>;
 

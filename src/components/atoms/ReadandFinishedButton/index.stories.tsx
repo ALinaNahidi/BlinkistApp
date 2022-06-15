@@ -1,14 +1,11 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-
-import Typography from ".";
-import { Box, Button } from "@mui/material";
 import { ThemeProvider } from "@emotion/react";
 import baseTheme from "../../../themes";
 import ReadAndFinished from ".";
 
 const ReadandFinishedButton = {
-  title: "ReadandFinishedButton",
+  title: "Design System/Atoms/ReadandFinishedButton",
   component: ReadAndFinished,
 } as ComponentMeta<typeof ReadAndFinished>;
 

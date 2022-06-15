@@ -7,7 +7,7 @@ import { MemoryRouter } from "react-router-dom";
 import TabsandCardState from "./TabsansCarsState";
 
 const CardState = {
-  title: "CardState",
+  title: "Design System/Organisms/CardState",
   component: TabsandCardState,
 } as ComponentMeta<typeof TabsandCardState>;
 

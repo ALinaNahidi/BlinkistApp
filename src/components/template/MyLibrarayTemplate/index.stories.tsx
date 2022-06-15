@@ -11,7 +11,7 @@ import TypographyComponent from "../../atoms/Typography";
 import Footer from "../../Organisms/Footer";
 
 const MyLibraryTemplateStory = {
-  title: "MyLibraryTemplateStory",
+  title: "Design System/Templates/MyLibraryTemplateStory",
   component: MyLibraryTemplate,
 } as ComponentMeta<typeof MyLibraryTemplate>;
 

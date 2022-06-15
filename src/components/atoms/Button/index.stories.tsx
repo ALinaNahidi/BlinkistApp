@@ -6,7 +6,7 @@ import { ThemeProvider } from "@emotion/react";
 import ButtonComponent from ".";
 
 const ButtonComponentStory = {
-  title: "ButtonComponent",
+  title: "Design System/Atoms/ButtonComponent",
   component: ButtonComponent,
 } as ComponentMeta<typeof ButtonComponent>;
 

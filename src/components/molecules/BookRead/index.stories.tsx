@@ -4,7 +4,7 @@ import { ThemeProvider } from "@emotion/react";
 import baseTheme from "../../../themes";
 import BookReadTime from ".";
 const BookReadTimeStory = {
-  title: "BookReadTimeStory",
+  title: "Design System/Molecules/BookReadTimeStory",
   component: BookReadTime,
 } as ComponentMeta<typeof BookReadTime>;
 

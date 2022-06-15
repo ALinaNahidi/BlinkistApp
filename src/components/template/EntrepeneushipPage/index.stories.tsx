@@ -4,7 +4,6 @@ import { ThemeProvider } from "@emotion/react";
 import baseTheme from "../../../themes";
 import { getBooks } from "../../../Data/data";
 import { MemoryRouter } from "react-router-dom";
-import MyLibraryTemplate from ".";
 import { CardMedia } from "@mui/material";
 import TextFieldSearch from "../../molecules/TextFieldSearch";
 import EntrepeneushipPageComponent from "../../Organisms/EntrepeneushipComponent";
@@ -12,7 +11,7 @@ import image from "../../../Images/explore.png";
 import EntrepeneushipTemplate from ".";
 
 const EntrepreneushipTemplateStory = {
-  title: "EntrepreneushipTemplateStory",
+  title: "Design System/Templates/EntrepreneushipTemplateStory",
   component: EntrepeneushipTemplate,
 } as ComponentMeta<typeof EntrepeneushipTemplate>;
 

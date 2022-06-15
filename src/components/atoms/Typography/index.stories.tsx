@@ -1,15 +1,12 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-
-
-import Typography from ".";
 import TypographyComponent from ".";
 import { ThemeProvider } from "@emotion/react";
 import baseTheme from "../../../themes";
 
 
 const TypographyComponentStory = {
-  title: "TypographyComponentStory",
+  title: "Design System/Atoms/TypographyComponentStory",
   component: TypographyComponent,
 } as ComponentMeta<typeof TypographyComponent>;
 

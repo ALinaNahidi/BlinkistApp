@@ -7,7 +7,7 @@ import { MemoryRouter } from "react-router-dom";
 import ExploreDropDown from ".";
 
 const ExploreDropDownStory = {
-  title: "ExploreDropDownStory",
+  title: "Design System/Organisms/ExploreDropDownStory",
   component: ExploreDropDown,
 } as ComponentMeta<typeof ExploreDropDown>;
 

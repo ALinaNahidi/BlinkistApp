@@ -7,7 +7,7 @@ import { MemoryRouter } from "react-router-dom";
 import NavBar from ".";
 
 const NavBarStory = {
-  title: "NavBarStory",
+  title: "Design System/Organisms/NavBarStory",
   component: NavBar,
 } as ComponentMeta<typeof NavBar>;
 
