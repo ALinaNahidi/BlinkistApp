@@ -8,7 +8,7 @@ import MyLibraryTemplate from ".";
 import BookDetailComponent from "../../Organisms/BookDetailComponent";
 
 const BookDetailTemplateStory = {
-  title: "Design System/Templates/BookDetailTemplateStory",
+  title: "Templates/BookDetailTemplateStory",
   component: MyLibraryTemplate,
 } as ComponentMeta<typeof MyLibraryTemplate>;
 

@@ -52,6 +52,7 @@ const useStyles: any = makeStyles((theme: Theme) => ({
     fontSize: "16px",
     lineHeight: "20px",
     paddingBottom: "3px",
+    paddingTop:"3px"
   },
 
   Reads: {
@@ -101,7 +102,10 @@ const BookCard = (props: BookCardProps) => {
             />
           </Box>
           <Box className={classes.authorName}>
-            <TypographyComponent variant="body1" children={props.book.author} />
+            <TypographyComponent
+              variant="subtitle"
+              children={props.book.author}
+            />
           </Box>
           <Box className={classes.Reads}>
             <BookReadTime />
@@ -111,7 +115,7 @@ const BookCard = (props: BookCardProps) => {
         {typeOfCard === "myLibrary" && (
           <Link
             to="/BookDetailPage"
-            state={{ "book": props.book,"bookObject":props.bookObject }}
+            state={{ book: props.book, bookObject: props.bookObject }}
             key={props.book.link}
             style={{ textDecoration: "none" }}
           >

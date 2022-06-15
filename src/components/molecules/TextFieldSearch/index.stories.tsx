@@ -4,7 +4,7 @@ import { ThemeProvider } from "@emotion/react";
 import baseTheme from "../../../themes";
 import TextFieldSearch from ".";
 const SearchField = {
-  title: "Design System/Molecules/SearchField",
+  title: "Molecules/SearchField",
   component: TextFieldSearch,
 } as ComponentMeta<typeof TextFieldSearch>;
 

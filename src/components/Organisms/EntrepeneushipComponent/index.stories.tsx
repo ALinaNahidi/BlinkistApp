@@ -6,8 +6,8 @@ import { getBooks } from "../../../Data/data";
 import { MemoryRouter } from "react-router-dom";
 import EntrepeneushipPageComponent from ".";
 
-const BookDetailComponentStory = {
-  title: "Design System/Organisms/BookDetailComponentStory",
+const EntrepeneushipComponentStory = {
+  title: "Organisms/EntrepeneushipComponentStory",
   component: EntrepeneushipPageComponent,
 } as ComponentMeta<typeof EntrepeneushipPageComponent>;
 
@@ -24,4 +24,4 @@ ReadCard.args = {
   bookObject: getBooks(),
 };
 
-export default BookDetailComponentStory;
+export default EntrepeneushipComponentStory;

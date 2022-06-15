@@ -6,7 +6,7 @@ import baseTheme from "../../../themes";
 
 
 const TypographyComponentStory = {
-  title: "Design System/Atoms/TypographyComponentStory",
+  title: "Atoms/TypographyComponentStory",
   component: TypographyComponent,
 } as ComponentMeta<typeof TypographyComponent>;
 

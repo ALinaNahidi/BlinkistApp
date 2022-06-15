@@ -5,7 +5,7 @@ import baseTheme from "../../../themes";
 import ReadAndFinished from ".";
 
 const ReadandFinishedButton = {
-  title: "Design System/Atoms/ReadandFinishedButton",
+  title: "Atoms/ReadandFinishedButton",
   component: ReadAndFinished,
 } as ComponentMeta<typeof ReadAndFinished>;
 

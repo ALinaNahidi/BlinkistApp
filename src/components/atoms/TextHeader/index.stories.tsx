@@ -6,7 +6,7 @@ import { ThemeProvider } from "@emotion/react";
 import baseTheme from "../../../themes";
 
 const TextHeaderStory = {
-  title: "Design System/Atoms/TextHeaderStory",
+  title: "Atoms/TextHeaderStory",
   component: TextHeader,
 } as ComponentMeta<typeof TextHeader>;
 

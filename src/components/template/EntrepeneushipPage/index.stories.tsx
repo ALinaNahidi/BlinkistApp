@@ -11,7 +11,7 @@ import image from "../../../Images/explore.png";
 import EntrepeneushipTemplate from ".";
 
 const EntrepreneushipTemplateStory = {
-  title: "Design System/Templates/EntrepreneushipTemplateStory",
+  title: "Templates/EntrepreneushipTemplateStory",
   component: EntrepeneushipTemplate,
 } as ComponentMeta<typeof EntrepeneushipTemplate>;
 
@@ -25,11 +25,9 @@ const Template: ComponentStory<typeof EntrepeneushipTemplate> = (args) => (
 
 export const HomePage = Template.bind({});
 HomePage.args = {
-
-
   image: (
     <CardMedia
-      sx={{ margin: "6% 17% 0% 15%", width: "912px", height: "264px" }}
+      sx={{ margin: "10% 0% 5%", width: "912px", height: "264px" }}
       image={image}
       title="Paella dish"
     />

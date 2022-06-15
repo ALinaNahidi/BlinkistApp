@@ -4,7 +4,7 @@ import AddToLibrary from ".";
 import { ThemeProvider } from "@emotion/react";
 import baseTheme from "../../../themes";
 const AddToLibraryComponent = {
-  title: "Design System/Molecules/AddToLibraryComponent",
+  title: "Molecules/AddToLibraryComponent",
   component: AddToLibrary,
 } as ComponentMeta<typeof AddToLibrary>;
 

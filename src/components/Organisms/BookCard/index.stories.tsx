@@ -7,7 +7,7 @@ import { getBooks } from "../../../Data/data";
 import { MemoryRouter } from "react-router-dom";
 
 const BookCardStory = {
-  title: "Design System/Organisms/BookCardStory",
+  title: "Organisms/BookCardStory",
   component: BookCard,
 } as ComponentMeta<typeof BookCard>;
 

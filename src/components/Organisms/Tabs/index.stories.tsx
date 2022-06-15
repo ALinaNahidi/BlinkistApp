@@ -7,7 +7,7 @@ import { MemoryRouter } from "react-router-dom";
 import BlinkistTabs from ".";
 
 const Tabs = {
-  title: "Design System/Organisms/Tabs",
+  title: "Organisms/Tabs",
   component: BlinkistTabs,
 } as ComponentMeta<typeof BlinkistTabs>;
 

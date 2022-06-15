@@ -6,7 +6,7 @@ import { MemoryRouter } from "react-router-dom";
 import Footer from ".";
 
 const FooterStory = {
-  title: "Design System/Organisms/FooterStory",
+  title: "Organisms/FooterStory",
   component: Footer,
 } as ComponentMeta<typeof Footer>;
 

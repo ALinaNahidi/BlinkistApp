@@ -5,7 +5,7 @@ import baseTheme from "../../../themes";
 
 import NavItems from ".";
 const NavItemsStory = {
-  title: "Design System/Molecules/NavItemsStory",
+  title: "Molecules/NavItemsStory",
   component: NavItems,
 } as ComponentMeta<typeof NavItems>;
 

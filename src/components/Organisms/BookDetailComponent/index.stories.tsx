@@ -7,7 +7,7 @@ import BookDetailComponent from ".";
 import { MemoryRouter } from "react-router-dom";
 
 const BookDetailComponentStory = {
-  title: "Design System/Organisms/BookDetailComponentStory",
+  title: "Organisms/BookDetailComponentStory",
   component: BookDetailComponent,
 } as ComponentMeta<typeof BookDetailComponent>;
 
