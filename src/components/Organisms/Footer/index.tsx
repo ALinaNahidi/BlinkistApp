@@ -34,7 +34,7 @@ const classes = useStyles();
       <Box py={{ xs: 0, sm: 7 }} bgcolor="#F1F6F4" color="#03314B">
         <Container sx={{ marginLeft: "16%" }}>
           <Grid container spacing={2}>
-            <Grid xs={12} sm={5}>
+            <Grid item xs={12} sm={5}>
               <Box
                 sx={{ height: "24px", marginTop: "10px" }}
                 component="img"

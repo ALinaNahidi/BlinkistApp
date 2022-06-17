@@ -22,7 +22,7 @@ interface MyLibraryTemplateProps {
 
   header: JSX.Element;
   blinkistTabs: JSX.Element;
-  footer: JSX.Element;
+
 }
 
 const MyLibraryTemplate = (props: MyLibraryTemplateProps) => {

@@ -97,7 +97,7 @@ const ExploreDropDown = (props: ExploreDropDownProps) => {
               <div>
                 <CssBaseline />
                 <Box {...bindTrigger(popupState)}>
-                  <div className={classes.link}>
+                  <div className={classes.link} data-testid="popup-state">
                     <Box
                       className={classes.link}
                       color={"#03314B"}
@@ -129,6 +129,7 @@ const ExploreDropDown = (props: ExploreDropDownProps) => {
                   </div>
                 </Box>
                 <Popover
+                  data-testid="popup-state-onclick"
                   {...bindPopover(popupState)}
                   PaperProps={{
                     style: {
@@ -191,7 +192,7 @@ const ExploreDropDown = (props: ExploreDropDownProps) => {
                             <NotificationsNoneOutlinedIcon />
                             <Link
                               to={"/entrepeneuship"}
-                              state={ props.bookObject }
+                              state={props.bookObject}
                               className={classes.ListItem}
                             >
                               <Typography

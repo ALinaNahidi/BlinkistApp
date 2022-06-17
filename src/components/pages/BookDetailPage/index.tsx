@@ -35,7 +35,6 @@ const BookDetailPage = () => {
           <BookDetailComponent book={book} bookObject={bookObject} />
         }
       />
-
       <Footer />
     </React.Fragment>
   );

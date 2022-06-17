@@ -29,8 +29,9 @@ const useStyles = makeStyles((theme: Theme) => ({
 const ReadAndFinished = (props: ReadAndFinishedProps) => {
   const classes = useStyles();
   return (
-    <Box className={classes.button}>
+    <Box className={classes.button} data-testid="read-and-finished-box">
       <Button
+        data-testid="read-and-finished-button"
         className={classes.button}
         onClick={props.onFinishedClicked}
         disableRipple={true}

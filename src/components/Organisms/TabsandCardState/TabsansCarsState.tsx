@@ -23,7 +23,6 @@ type Book = {
 
 const TabsandCardState = (props:TabsandCardStateProps) => {
   const {type} = props
-console.log(props.books)
   return (
     <Box
       sx={{
