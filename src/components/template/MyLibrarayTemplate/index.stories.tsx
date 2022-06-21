@@ -8,7 +8,6 @@ import MyLibraryTemplate from ".";
 import BlinkistTabs from "../../Organisms/Tabs";
 import { Box } from "@mui/material";
 import TypographyComponent from "../../atoms/Typography";
-import Footer from "../../Organisms/Footer";
 
 const MyLibraryTemplateStory = {
   title: "Templates/MyLibraryTemplateStory",
@@ -47,8 +46,6 @@ HomePage.args = {
       <TypographyComponent children="My Library" variant="h3" />
     </Box>
   ),
-
-  footer: <Footer />,
 };
 
 const handleClick = (arg: any) => {};

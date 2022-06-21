@@ -9,6 +9,7 @@ import { TabContext, TabList, TabPanel } from "@mui/lab";
 import { Link } from "react-router-dom";
 
 type Book = {
+  id: number;
   author: string;
   country: string;
   imageLink: string;
@@ -197,7 +198,7 @@ const BookDetailComponent = (props: BookDetailComponentProps) => {
             width: "304px",
             height: "304px",
           }}
-          src={book.imageLink}
+          src={require(`../../../Images/${book.imageLink}`)}
           title="Paella dish"
         />
       </Box>

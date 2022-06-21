@@ -1,9 +1,9 @@
 import { Theme } from "@emotion/react";
-import { Box, Container, Grid, Link } from "@mui/material";
+import { Box, Container, Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import React from "react";
 
-import logo from "../../../Images/logo.png";
+import logo from "../../../Images/Logo.png";
 import TypographyComponent from "../../atoms/Typography";
 
 

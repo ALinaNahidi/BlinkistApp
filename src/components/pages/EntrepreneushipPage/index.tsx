@@ -1,13 +1,14 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import EntrepeneushipPageComponent from '../../Organisms/EntrepeneushipComponent';
 import Footer from '../../Organisms/Footer';
 import NavBar from '../../Organisms/NavBar';
-import image from "../../../Images/explore.png"
+import image from "../../../Images/Explore.png"
 import { CardMedia } from '@mui/material';
 import TextFieldSearch from '../../molecules/TextFieldSearch';
 import { useLocation } from 'react-router-dom';
 import EntrepeneushipTemplate from '../../template/EntrepeneushipPage';
 type Book = {
+  id: number;
   author: string;
   country: string;
   imageLink: string;

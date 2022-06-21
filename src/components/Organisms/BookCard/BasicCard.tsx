@@ -16,8 +16,10 @@ import LinearProgress, {
 import AddToLibrary from "../../molecules/AddToLibrary";
 import ReadAndFinished from "../../atoms/ReadandFinishedButton";
 import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
 type Book = {
+  id:number,
   author: string;
   country: string;
   imageLink: string;
@@ -35,7 +37,7 @@ interface BookCardProps {
   book: Book;
   typeOfCard?: string;
   onFinishedClick: (arg: any) => void;
-  bookObject:Array<Book>;
+  bookObject: Array<Book>;
 }
 
 const useStyles: any = makeStyles((theme: Theme) => ({
@@ -52,7 +54,7 @@ const useStyles: any = makeStyles((theme: Theme) => ({
     fontSize: "16px",
     lineHeight: "20px",
     paddingBottom: "3px",
-    paddingTop:"3px"
+    paddingTop: "3px",
   },
 
   Reads: {
@@ -77,6 +79,7 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
 }));
 
 const BookCard = (props: BookCardProps) => {
+  const { isAuthenticated } = useAuth0();
   const classes = useStyles();
   const typeOfCard = props.typeOfCard;
   return (
@@ -91,7 +94,7 @@ const BookCard = (props: BookCardProps) => {
           component="img"
           height="294.1"
           width="292"
-          image={require("../../../Images/book1.png")}
+          src={require(`../../../Images/${props.book.imageLink}`)}          
           alt="Book Cover"
         />
         <CardContent>
@@ -112,46 +115,56 @@ const BookCard = (props: BookCardProps) => {
             <TotalReads />
           </Box>
         </CardContent>
-        {typeOfCard === "myLibrary" && (
-          <Link
-            to="/BookDetailPage"
-            state={{ book: props.book, bookObject: props.bookObject }}
-            key={props.book.link}
-            style={{ textDecoration: "none" }}
-          >
-            <Box>
-              <AddToLibrary children="Add to library" />
-            </Box>
-          </Link>
-        )}
-        {typeOfCard === "explore" && (
+        {isAuthenticated && (
           <Box>
-            <CardActions sx={{ display: "flex", justifyContent: "flex-end" }}>
-              <IconButton aria-label="hamburger">
-                <MoreHorizIcon />
-              </IconButton>
-            </CardActions>
-            <BorderLinearProgress variant="determinate" value={30} />
+            {typeOfCard === "myLibrary" && (
+              <Link
+                to="/BookDetailPage"
+                state={{ book: props.book, bookObject: props.bookObject }}
+                key={props.book.link}
+                style={{ textDecoration: "none" }}
+              >
+                <Box>
+                  <AddToLibrary children="Add to library" />
+                </Box>
+              </Link>
+            )}
+
+            {typeOfCard === "finished" && (
+              <Box>
+                <ReadAndFinished
+                  children="Read again"
+                  onFinishedClicked={props.onFinishedClick}
+                />
+                <BorderLinearProgress variant="determinate" value={100} />
+              </Box>
+            )}
+
+            {typeOfCard === "reading" && (
+              <Box>
+                <ReadAndFinished
+                  children="Finished"
+                  onFinishedClicked={props.onFinishedClick}
+                />
+                <BorderLinearProgress variant="determinate" value={30} />
+              </Box>
+            )}
           </Box>
         )}
-
-        {typeOfCard === "finished" && (
+        {!isAuthenticated && (
           <Box>
-            <ReadAndFinished
-              children="Read again"
-              onFinishedClicked={props.onFinishedClick}
-            />
-            <BorderLinearProgress variant="determinate" value={100} />
-          </Box>
-        )}
-
-        {typeOfCard === "reading" && (
-          <Box>
-            <ReadAndFinished
-              children="Finished"
-              onFinishedClicked={props.onFinishedClick}
-            />
-            <BorderLinearProgress variant="determinate" value={30} />
+            {typeOfCard === "explore" && (
+              <Box>
+                <CardActions
+                  sx={{ display: "flex", justifyContent: "flex-end" }}
+                >
+                  <IconButton aria-label="hamburger">
+                    <MoreHorizIcon />
+                  </IconButton>
+                </CardActions>
+                <BorderLinearProgress variant="determinate" value={30} />
+              </Box>
+            )}
           </Box>
         )}
       </Card>

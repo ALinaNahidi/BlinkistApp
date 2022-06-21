@@ -3,15 +3,12 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import logo from "../../../Images/logo.png";
+import logo from "../../../Images/Logo.png";
 import { makeStyles } from "@mui/styles";
 import { Theme } from "@emotion/react";
 import SearchIcon from "@mui/icons-material/Search";
@@ -19,8 +16,11 @@ import TypographyComponent from "../../atoms/Typography";
 import NavItems from "../../molecules/NavItems";
 import ExploreDropDown from "../ExploreDropDown";
 import { Backdrop, CssBaseline } from "@mui/material";
+import { useAuth0 } from "@auth0/auth0-react";
+import { useNavigate } from "react-router-dom";
 
 type Book = {
+  id: number;
   author: string;
   country: string;
   imageLink: string;
@@ -54,33 +54,27 @@ const useStyles: any = makeStyles((theme: Theme) => ({
   },
 }));
 
-const pages = [
-  <SearchIcon />,
-  // <ExploreDropDown  />,
-  // <TypographyComponent variant="body1" children="My Library" />,
-];
+
 
 const NavBar = (props: NavBarProp) => {
   const classes = useStyles();
+  const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
 
-  const [anchorElNav, setAnchorElNav] =
-    React.useState<null | HTMLElement>(null);
 
-  const [anchorElUser, setAnchorElUser] =
-    React.useState<null | HTMLElement>(null);
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+
+ 
+    const navigate = useNavigate()
+  const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+    
+  };
 
   const [backDrop, setBackDrop] = React.useState(true);
-
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
 
   const handleBackDrop = (iconVariable: boolean) => {
     setBackDrop(iconVariable);
@@ -100,19 +94,18 @@ const NavBar = (props: NavBarProp) => {
             <Box
               component="img"
               src={logo}
-              sx={{ display: "flex" , mr: 1, ml:1 }}
+              sx={{ display: "flex", mr: 1, ml: 1 }}
               className={classes.logo}
             ></Box>
 
             <Box
               sx={{
                 flexGrow: 1,
-                display:"flex",
+                display: "flex",
                 alignItems: "center",
               }}
             >
               <Button
-                onClick={handleCloseNavMenu}
                 sx={{
                   my: 2,
                   color: "#03314B",
@@ -124,7 +117,6 @@ const NavBar = (props: NavBarProp) => {
               </Button>
               <Button
                 disableRipple={true}
-                onClick={handleCloseNavMenu}
                 sx={{
                   my: 2,
                   color: "#03314B",
@@ -139,7 +131,6 @@ const NavBar = (props: NavBarProp) => {
               </Button>
               <Button
                 disableRipple={true}
-                onClick={handleCloseNavMenu}
                 sx={{
                   my: 2,
                   color: "#03314B",
@@ -151,23 +142,79 @@ const NavBar = (props: NavBarProp) => {
               </Button>
             </Box>
 
-            <Box sx={{ flexGrow: 0 }}>
-              <Tooltip title="Open settings">
-                <NavItems
-                  children={
-                    <IconButton
-                      disableRipple={true}
-                      onClick={handleOpenUserMenu}
-                      sx={{ p: 0 }}
+            <Box>
+              <Toolbar>
+                <Box>
+                  <NavItems
+                    children={
+                      <IconButton
+                        id="menu-account"
+                        disableRipple={true}
+                        aria-label="account of current user"
+                        aria-controls="menu-appbar"
+                        aria-haspopup="true"
+                        onClick={handleMenu}
+                        color="inherit"
+                        sx={{ p: 0 }}
+                      >
+                        <Avatar
+                          alt="Remy Sharp"
+                          src="/static/images/avatar/2.jpg"
+                        />
+                      </IconButton>
+                    }
+                  />
+                  {isAuthenticated ? (
+                    <Menu
+                      id="menu-appbar"
+                      anchorEl={anchorEl}
+                      anchorOrigin={{
+                        vertical: "bottom",
+                        horizontal: "right",
+                      }}
+                      keepMounted
+                      transformOrigin={{
+                        vertical: "bottom",
+                        horizontal: "right",
+                      }}
+                      open={Boolean(anchorEl)}
+                      onClose={handleClose}
+                      MenuListProps={{
+                        "aria-labelledby": "menu-account",
+                      }}
+                      sx={{ margin: "2% 0% 0% 65%" }}
                     >
-                      <Avatar
-                        alt="Remy Sharp"
-                        src="/static/images/avatar/2.jpg"
-                      />
-                    </IconButton>
-                  }
-                />
-              </Tooltip>
+                      <MenuItem onClick={handleClose}>My account</MenuItem>
+                      <MenuItem onClick={()=>{logout(); handleClose();}}>Log Out</MenuItem>
+                    </Menu>
+                  ) : (
+                    <Menu
+                      id="menu-appbar"
+                      anchorEl={anchorEl}
+                      anchorOrigin={{
+                        vertical: "bottom",
+                        horizontal: "right",
+                      }}
+                      keepMounted
+                      transformOrigin={{
+                        vertical: "bottom",
+                        horizontal: "right",
+                      }}
+                      open={Boolean(anchorEl)}
+                      onClose={handleClose}
+                      
+                      sx={{ margin: "2.5% 0% 0% 65%" }}
+                    >
+                      <MenuItem onClick={handleClose}>Documentations</MenuItem>
+                      <MenuItem
+                        onClick={() => {loginWithRedirect();handleClose();}}
+                      >
+                        Log In
+                      </MenuItem>
+                    </Menu>
+                  )}
+                </Box>
+              </Toolbar>
             </Box>
           </Toolbar>
         </Container>
