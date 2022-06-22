@@ -2,41 +2,20 @@
 <testExecutions version="1">
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/BookCard/index.test.tsx">
     <testCase name="renders Book Card author Organism" duration="170"/>
-    <testCase name="renders Book Card title Organism" duration="41">
-      <failure message="Error: expect(element).toHaveClass(&quot;MuiTypography-subtitle2&quot;)"><![CDATA[Error: expect(element).toHaveClass("MuiTypography-subtitle2")
-
-Expected the element to have class:
-  MuiTypography-subtitle2
-Received:
-  MuiTypography-root MuiTypography-body1 css-1t7pznn-MuiTypography-root
-    at Object.<anonymous> (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/BookCard/index.test.tsx:66:25)
-    at Promise.then.completed (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/utils.js:391:28)
-    at new Promise (<anonymous>)
-    at callAsyncCircusFn (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/utils.js:316:10)
-    at _callCircusTest (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/run.js:218:40)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at _runTest (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/run.js:155:3)
-    at _runTestsForDescribeBlock (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/run.js:66:9)
-    at run (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/run.js:25:3)
-    at runAndTransformResultsToJestFormat (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:170:21)
-    at jestAdapter (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
-    at runTestInternal (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-runner/build/runTest.js:389:16)
-    at runTest (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-runner/build/runTest.js:475:34)
-    at Object.worker (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-runner/build/testWorker.js:133:12)]]></failure>
-    </testCase>
-    <testCase name="renders Book Card Finished button Organism" duration="53"/>
-    <testCase name="renders Book Card Read again button Organism" duration="40"/>
-    <testCase name="renders Book Card Add to Library button Organism" duration="43"/>
-  </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/ExploreDropDown/index.test.tsx">
-    <testCase name="renders Explore drop down Organism" duration="172"/>
-    <testCase name="renders Explore drop down OnClick Organism" duration="507"/>
+    <testCase name="renders Book Card title Organism" duration="41"/>
+    <testCase name="renders Book Card Finished button Organism" duration="65"/>
+    <testCase name="renders Book Card Read again button Organism" duration="37"/>
+    <testCase name="renders Book Card Add to Library button Organism" duration="36"/>
   </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/EntrepeneushipComponent/index.test.tsx">
-    <testCase name="renders Book Card author Organism" duration="811"/>
+    <testCase name="renders Book Card author Organism" duration="643"/>
+  </file>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/ExploreDropDown/index.test.tsx">
+    <testCase name="renders Explore drop down Organism" duration="179"/>
+    <testCase name="renders Explore drop down OnClick Organism" duration="472"/>
   </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/TabsandCardState/index.test.tsx">
-    <testCase name="renders Reading Card State Organism" duration="439">
+    <testCase name="renders Reading Card State Organism" duration="490">
       <failure message="TestingLibraryElementError: Unable to find an element with the text: Finished. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible."><![CDATA[TestingLibraryElementError: Unable to find an element with the text: Finished. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
 
 Ignored nodes: comments, <script />, <style />
@@ -363,7 +342,7 @@ Ignored nodes: comments, <script />, <style />
     at runTest (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-runner/build/runTest.js:475:34)
     at Object.worker (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-runner/build/testWorker.js:133:12)]]></failure>
     </testCase>
-    <testCase name="renders finished Card State Organism" duration="88">
+    <testCase name="renders finished Card State Organism" duration="99">
       <failure message="TestingLibraryElementError: Unable to find an element with the text: Read again. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible."><![CDATA[TestingLibraryElementError: Unable to find an element with the text: Read again. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
 
 Ignored nodes: comments, <script />, <style />
@@ -602,7 +581,7 @@ Ignored nodes: comments, <script />, <style />
     at runTest (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-runner/build/runTest.js:475:34)
     at Object.worker (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-runner/build/testWorker.js:133:12)]]></failure>
     </testCase>
-    <testCase name="renders Library Card State Organism" duration="301">
+    <testCase name="renders Library Card State Organism" duration="304">
       <failure message="TestingLibraryElementError: Unable to find an element with the text: Add to Library. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible."><![CDATA[TestingLibraryElementError: Unable to find an element with the text: Add to Library. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
 
 Ignored nodes: comments, <script />, <style />
@@ -768,7 +747,7 @@ Ignored nodes: comments, <script />, <style />
     at runTest (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-runner/build/runTest.js:475:34)
     at Object.worker (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-runner/build/testWorker.js:133:12)]]></failure>
     </testCase>
-    <testCase name="renders Explore Card State Organism" duration="19">
+    <testCase name="renders Explore Card State Organism" duration="32">
       <failure message="Error: expect(element).toHaveClass(&quot;MuiTypography-body1&quot;)"><![CDATA[Error: expect(element).toHaveClass("MuiTypography-body1")
 
 Expected the element to have class:
@@ -792,67 +771,81 @@ Received:
     </testCase>
   </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/pages/EntrepreneushipPage/index.test.tsx">
-    <testCase name="renders Entrepeneuship page" duration="1814"/>
+    <testCase name="renders Entrepeneuship page" duration="1703"/>
   </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/pages/BookDetailPage/index.test.tsx">
-    <testCase name="renders BookDetail page" duration="1095"/>
+    <testCase name="renders BookDetail page" duration="1088"/>
   </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/App.test.tsx">
-    <testCase name="renders learn react link" duration="997"/>
-  </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/pages/LibraryPage/index.test.tsx">
-    <testCase name="renders MyLibrary Page" duration="809"/>
-  </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/NavBar/index.test.tsx">
-    <testCase name="renders NavBar Organism" duration="576"/>
-  </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/BookDetailComponent/index.test.tsx">
-    <testCase name="renders Book Card author Organism" duration="410"/>
-  </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/template/MyLibrarayTemplate/index.test.tsx">
-    <testCase name="renders Entrepeneuship Template" duration="141"/>
-  </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/Footer/index.test.tsx">
-    <testCase name="renders Footer Organism" duration="219"/>
-  </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/molecules/NavItems/index.test.tsx">
-    <testCase name="renders Explore molecule" duration="86"/>
+    <testCase name="renders learn react link" duration="917"/>
   </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/Tabs/index.test.tsx">
-    <testCase name="renders Currently Reading Tab Organism" duration="448"/>
-    <testCase name="renders Finished Tab Organism" duration="137"/>
+    <testCase name="renders Currently Reading Tab Organism" duration="437"/>
+    <testCase name="renders Finished Tab Organism" duration="221"/>
   </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/atoms/Button/index.test.tsx">
-    <testCase name="renders contained button" duration="103"/>
-    <testCase name="renders outlined button" duration="48"/>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/NavBar/index.test.tsx">
+    <testCase name="renders NavBar Organism" duration="492"/>
   </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/molecules/TextFieldSearch/index.test.tsx">
-    <testCase name="renders Text Field Search molecule" duration="143"/>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/pages/LibraryPage/index.test.tsx">
+    <testCase name="renders MyLibrary Page" duration="862"/>
+  </file>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/BookDetailComponent/index.test.tsx">
+    <testCase name="renders Book Card author Organism" duration="429"/>
   </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/template/BookDetailTemplate/index.test.tsx">
-    <testCase name="renders BookDetail Template" duration="101"/>
+    <testCase name="renders BookDetail Template" duration="113"/>
   </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/template/EntrepeneushipPage/index.test.tsx">
-    <testCase name="renders Entrepeneuship Template" duration="118"/>
+    <testCase name="renders Entrepeneuship Template" duration="148"/>
   </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/molecules/AddToLibrary/index.test.tsx">
-    <testCase name="renders Add to library molecule" duration="316"/>
-  </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/atoms/TextHeader/index.test.tsx">
-    <testCase name="renders Header h3" duration="66"/>
-    <testCase name="renders Header h5" duration="30"/>
-  </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/atoms/ReadandFinishedButton/index.test.tsx">
-    <testCase name="renders Reading button" duration="231"/>
-  </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/molecules/BookRead/index.test.tsx">
-    <testCase name="renders Book Read Time molecule" duration="39"/>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/Footer/index.test.tsx">
+    <testCase name="renders Footer Organism" duration="197"/>
   </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/atoms/Typography/index.test.tsx">
-    <testCase name="renders Typography header" duration="32"/>
-    <testCase name="renders Typography subtitle" duration="6"/>
-    <testCase name="renders Typography h3" duration="5"/>
-    <testCase name="renders Typography h2" duration="5"/>
-    <testCase name="renders Typography default" duration="5"/>
+    <testCase name="renders Typography header" duration="50"/>
+    <testCase name="renders Typography subtitle" duration="11"/>
+    <testCase name="renders Typography h3" duration="10"/>
+    <testCase name="renders Typography h2" duration="10"/>
+    <testCase name="renders Typography default" duration="11"/>
+  </file>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/molecules/TextFieldSearch/index.test.tsx">
+    <testCase name="renders Text Field Search molecule" duration="129"/>
+  </file>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/template/MyLibrarayTemplate/index.test.tsx">
+    <testCase name="renders Entrepeneuship Template" duration="292"/>
+  </file>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/atoms/ReadandFinishedButton/index.test.tsx">
+    <testCase name="renders Reading button" duration="104"/>
+  </file>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/molecules/AddToLibrary/index.test.tsx">
+    <testCase name="renders Add to library molecule" duration="325"/>
+  </file>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/molecules/NavItems/index.test.tsx">
+    <testCase name="renders Explore molecule" duration="90"/>
+  </file>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/atoms/TextHeader/index.test.tsx">
+    <testCase name="renders Header h3" duration="46"/>
+    <testCase name="renders Header h5" duration="12"/>
+  </file>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/molecules/BookRead/index.test.tsx">
+    <testCase name="renders Book Read Time molecule" duration="49"/>
+  </file>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/atoms/Button/index.test.tsx">
+    <testCase name="renders contained button" duration="76"/>
+    <testCase name="renders outlined button" duration="23"/>
+  </file>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/store/tests/bugs.spec.tsx">
+    <testCase name="blinksSlice loading bugs if the bugs exist in the cache they should not be fetched from the server again." duration="20">
+      <failure message="Error: expect(received).toBe(expected) // Object.is equality"><![CDATA[Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 1
+Received: 2
+    at Object.<anonymous> (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/store/tests/bugs.spec.tsx:43:46)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)]]></failure>
+    </testCase>
+    <testCase name="blinksSlice loading bugs if the bugs don&apos;t exist in the cache they should be fetched from the server and put in the store" duration="2"/>
+    <testCase name="blinksSlice loading bugs if the bugs don&apos;t exist in the cache loading indicator should be true while fetching the bugs" duration="1"/>
+    <testCase name="blinksSlice loading bugs if the bugs don&apos;t exist in the cache loading indicator should be false after the bugs are fetched" duration="1"/>
+    <testCase name="blinksSlice loading bugs if the bugs don&apos;t exist in the cache loading indicator should be false if the server returns an error" duration="2"/>
   </file>
 </testExecutions>

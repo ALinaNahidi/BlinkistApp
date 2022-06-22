@@ -63,7 +63,7 @@ it("renders Book Card title Organism", () => {
     Librarybutton = screen.getByText("13-minute read");
   
   expect(Librarybutton).toBeTruthy();
-  expect(Librarybutton).toHaveClass("MuiTypography-subtitle2");
+  expect(Librarybutton).toHaveClass("MuiTypography-body1");
   expect(Librarybutton).toBeInTheDocument();
   expect(Librarybutton).toBeDefined();
 });
