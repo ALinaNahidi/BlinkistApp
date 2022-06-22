@@ -25,6 +25,8 @@ it("renders Reading Card State Organism", () => {
   );
   const tabState = screen.getAllByText("Finished");
 
+  
+
   expect(tabState[0]).toBeTruthy();
   expect(tabState[0]).toHaveClass("MuiTypography-body1");
   expect(tabState[0]).toBeInTheDocument();

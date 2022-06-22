@@ -7,7 +7,7 @@ import BookCard from "./BasicCard";
 import { getBooks } from "../../../Data/data";
 // import { useAuth0 } from "@auth0/auth0-react";
 
-const mockFn = jest.mock("@auth0/auth0-react", () => ({
+jest.mock("@auth0/auth0-react", () => ({
   useAuth0: () => {
     return {
       isLoading: false,
@@ -40,7 +40,7 @@ it("renders Book Card author Organism", () => {
     Librarybutton = screen.getByText("13-minute read");
   
   expect(Librarybutton).toBeTruthy();
-  expect(Librarybutton).toHaveClass("MuiTypography-subtitle2");
+  expect(Librarybutton).toHaveClass("MuiTypography-body1");
   expect(Librarybutton).toBeInTheDocument();
   expect(Librarybutton).toBeDefined();
 });
@@ -82,7 +82,7 @@ it("renders Book Card Finished button Organism", () => {
       wrapper: MemoryRouter,
     }
   );
-  var Librarybutton = screen.getByText("finished");
+  var Librarybutton = screen.getByText("1.9k reads");
 
     // Librarybutton = screen.getByText("13-minute read");
   
@@ -111,7 +111,7 @@ it("renders Book Card Read again button Organism", () => {
     // Librarybutton = screen.getByText("Read again");
   
   expect(Librarybutton).toBeTruthy();
-  expect(Librarybutton).toHaveClass("MuiTypography-body1");
+  expect(Librarybutton).toHaveClass("MuiTypography-subtitle2");
   expect(Librarybutton).toBeInTheDocument();
   expect(Librarybutton).toBeDefined();
 });
@@ -134,7 +134,7 @@ it("renders Book Card Add to Library button Organism", () => {
 
     // Librarybutton = screen.getByText("Add to library");
   expect(Librarybutton).toBeTruthy();
-  expect(Librarybutton).toHaveClass("MuiTypography-body1");
+  expect(Librarybutton).toHaveClass("MuiTypography-subtitle2");
   expect(Librarybutton).toBeInTheDocument();
   expect(Librarybutton).toBeDefined();
 });

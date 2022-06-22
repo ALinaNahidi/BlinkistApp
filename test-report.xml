@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/TabsandCardState/index.test.tsx">
-    <testCase name="renders Reading Card State Organism" duration="443">
+    <testCase name="renders Reading Card State Organism" duration="360">
       <failure message="TestingLibraryElementError: Unable to find an element with the text: Finished. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible."><![CDATA[TestingLibraryElementError: Unable to find an element with the text: Finished. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
 
 Ignored nodes: comments, <script />, <style />
@@ -329,37 +329,16 @@ Ignored nodes: comments, <script />, <style />
     at Object.worker (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-runner/build/testWorker.js:133:12)]]></failure>
     </testCase>
   </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/ExploreDropDown/index.test.tsx">
-    <testCase name="renders Explore drop down Organism" duration="210"/>
-    <testCase name="renders Explore drop down OnClick Organism" duration="529"/>
-  </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/EntrepeneushipComponent/index.test.tsx">
-    <testCase name="renders Book Card author Organism" duration="955"/>
+    <testCase name="renders Book Card author Organism" duration="626"/>
+  </file>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/ExploreDropDown/index.test.tsx">
+    <testCase name="renders Explore drop down Organism" duration="167"/>
+    <testCase name="renders Explore drop down OnClick Organism" duration="509"/>
   </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/BookCard/index.test.tsx">
-    <testCase name="renders Book Card author Organism" duration="234">
-      <failure message="Error: expect(element).toHaveClass(&quot;MuiTypography-subtitle2&quot;)"><![CDATA[Error: expect(element).toHaveClass("MuiTypography-subtitle2")
-
-Expected the element to have class:
-  MuiTypography-subtitle2
-Received:
-  MuiTypography-root MuiTypography-body1 css-1t7pznn-MuiTypography-root
-    at Object.<anonymous> (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/BookCard/index.test.tsx:43:25)
-    at Promise.then.completed (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/utils.js:391:28)
-    at new Promise (<anonymous>)
-    at callAsyncCircusFn (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/utils.js:316:10)
-    at _callCircusTest (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/run.js:218:40)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at _runTest (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/run.js:155:3)
-    at _runTestsForDescribeBlock (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/run.js:66:9)
-    at run (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/run.js:25:3)
-    at runAndTransformResultsToJestFormat (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:170:21)
-    at jestAdapter (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
-    at runTestInternal (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-runner/build/runTest.js:389:16)
-    at runTest (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-runner/build/runTest.js:475:34)
-    at Object.worker (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-runner/build/testWorker.js:133:12)]]></failure>
-    </testCase>
-    <testCase name="renders Book Card title Organism" duration="65">
+    <testCase name="renders Book Card author Organism" duration="205"/>
+    <testCase name="renders Book Card title Organism" duration="51">
       <failure message="Error: expect(element).toHaveClass(&quot;MuiTypography-subtitle2&quot;)"><![CDATA[Error: expect(element).toHaveClass("MuiTypography-subtitle2")
 
 Expected the element to have class:
@@ -381,225 +360,70 @@ Received:
     at runTest (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-runner/build/runTest.js:475:34)
     at Object.worker (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-runner/build/testWorker.js:133:12)]]></failure>
     </testCase>
-    <testCase name="renders Book Card Finished button Organism" duration="63">
-      <failure message="TestingLibraryElementError: Unable to find an element with the text: finished. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible."><![CDATA[TestingLibraryElementError: Unable to find an element with the text: finished. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
-
-Ignored nodes: comments, <script />, <style />
-<body>
-  <div>
-    <div
-      class="MuiBox-root css-hqvbid"
-    >
-      <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-10ne068-MuiPaper-root-MuiCard-root"
-      >
-        <img
-          alt="Book Cover"
-          class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-          height="294.1"
-          src="Book11.png"
-          width="292"
-        />
-        <div
-          class="MuiCardContent-root css-eueg6h-MuiCardContent-root"
-        >
-          <div
-            class="makeStyles-titleOfBook-7 MuiBox-root css-0"
-          >
-            <h6
-              class="MuiTypography-root MuiTypography-subtitle2 css-nt6sz9-MuiTypography-root"
-            >
-              Molloy, Malone Dies
-            </h6>
-          </div>
-          <div
-            class="makeStyles-authorName-8 MuiBox-root css-0"
-          >
-            <h6
-              class="MuiTypography-root MuiTypography-subtitle2 css-nt6sz9-MuiTypography-root"
-            >
-              Samuel Beckett
-            </h6>
-          </div>
-          <div
-            class="makeStyles-Reads-9 MuiBox-root css-0"
-          >
-            <div
-              style="display: flex; align-items: center; flex-wrap: nowrap;"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorAction MuiSvgIcon-fontSizeSmall css-ltyecm-MuiSvgIcon-root"
-                data-testid="AccessTimeIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-                />
-                <path
-                  d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"
-                />
-              </svg>
-              <p
-                class="MuiTypography-root MuiTypography-body1 css-1t7pznn-MuiTypography-root"
-              >
-                13-minute read
-              </p>
-            </div>
-            <div
-              style="display: flex; align-items: center;"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorAction MuiSvgIcon-fontSizeSmall css-ltyecm-MuiSvgIcon-root"
-                data-testid="PersonOutlineIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M12 5.9c1.16 0 2.1.94 2.1 2.1s-.94 2.1-2.1 2.1S9.9 9.16 9.9 8s.94-2.1 2.1-2.1m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z"
-                />
-              </svg>
-              <p
-                class="MuiTypography-root MuiTypography-body1 css-1t7pznn-MuiTypography-root"
-              >
-                1.9k reads
-              </p>
-            </div>
-          </div>
-        </div>
-        <div
-          class="MuiBox-root css-0"
-        />
-      </div>
-    </div>
-  </div>
-</body>
-    at Object.getElementError (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/@testing-library/dom/dist/config.js:38:19)
-    at /home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-    at /home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-    at getByText (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-    at Object.<anonymous> (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/BookCard/index.test.tsx:85:30)
-    at Promise.then.completed (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/utils.js:391:28)
-    at new Promise (<anonymous>)
-    at callAsyncCircusFn (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/utils.js:316:10)
-    at _callCircusTest (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/run.js:218:40)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at _runTest (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/run.js:155:3)
-    at _runTestsForDescribeBlock (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/run.js:66:9)
-    at run (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/run.js:25:3)
-    at runAndTransformResultsToJestFormat (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:170:21)
-    at jestAdapter (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
-    at runTestInternal (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-runner/build/runTest.js:389:16)
-    at runTest (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-runner/build/runTest.js:475:34)
-    at Object.worker (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-runner/build/testWorker.js:133:12)]]></failure>
-    </testCase>
-    <testCase name="renders Book Card Read again button Organism" duration="52">
-      <failure message="Error: expect(element).toHaveClass(&quot;MuiTypography-body1&quot;)"><![CDATA[Error: expect(element).toHaveClass("MuiTypography-body1")
-
-Expected the element to have class:
-  MuiTypography-body1
-Received:
-  MuiTypography-root MuiTypography-subtitle2 css-nt6sz9-MuiTypography-root
-    at Object.<anonymous> (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/BookCard/index.test.tsx:114:25)
-    at Promise.then.completed (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/utils.js:391:28)
-    at new Promise (<anonymous>)
-    at callAsyncCircusFn (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/utils.js:316:10)
-    at _callCircusTest (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/run.js:218:40)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at _runTest (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/run.js:155:3)
-    at _runTestsForDescribeBlock (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/run.js:66:9)
-    at run (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/run.js:25:3)
-    at runAndTransformResultsToJestFormat (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:170:21)
-    at jestAdapter (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
-    at runTestInternal (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-runner/build/runTest.js:389:16)
-    at runTest (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-runner/build/runTest.js:475:34)
-    at Object.worker (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-runner/build/testWorker.js:133:12)]]></failure>
-    </testCase>
-    <testCase name="renders Book Card Add to Library button Organism" duration="35">
-      <failure message="Error: expect(element).toHaveClass(&quot;MuiTypography-body1&quot;)"><![CDATA[Error: expect(element).toHaveClass("MuiTypography-body1")
-
-Expected the element to have class:
-  MuiTypography-body1
-Received:
-  MuiTypography-root MuiTypography-subtitle2 css-nt6sz9-MuiTypography-root
-    at Object.<anonymous> (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/BookCard/index.test.tsx:137:25)
-    at Promise.then.completed (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/utils.js:391:28)
-    at new Promise (<anonymous>)
-    at callAsyncCircusFn (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/utils.js:316:10)
-    at _callCircusTest (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/run.js:218:40)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at _runTest (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/run.js:155:3)
-    at _runTestsForDescribeBlock (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/run.js:66:9)
-    at run (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/run.js:25:3)
-    at runAndTransformResultsToJestFormat (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:170:21)
-    at jestAdapter (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
-    at runTestInternal (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-runner/build/runTest.js:389:16)
-    at runTest (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-runner/build/runTest.js:475:34)
-    at Object.worker (/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/node_modules/jest-runner/build/testWorker.js:133:12)]]></failure>
-    </testCase>
+    <testCase name="renders Book Card Finished button Organism" duration="68"/>
+    <testCase name="renders Book Card Read again button Organism" duration="44"/>
+    <testCase name="renders Book Card Add to Library button Organism" duration="32"/>
   </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/pages/EntrepreneushipPage/index.test.tsx">
-    <testCase name="renders Entrepeneuship page" duration="2060"/>
+    <testCase name="renders Entrepeneuship page" duration="1762"/>
   </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/pages/BookDetailPage/index.test.tsx">
-    <testCase name="renders BookDetail page" duration="1364"/>
+    <testCase name="renders BookDetail page" duration="1099"/>
   </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/App.test.tsx">
-    <testCase name="renders learn react link" duration="1155"/>
+    <testCase name="renders learn react link" duration="1008"/>
   </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/NavBar/index.test.tsx">
-    <testCase name="renders NavBar Organism" duration="629"/>
+    <testCase name="renders NavBar Organism" duration="575"/>
   </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/BookDetailComponent/index.test.tsx">
-    <testCase name="renders Book Card author Organism" duration="449"/>
-  </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/pages/LibraryPage/index.test.tsx">
-    <testCase name="renders MyLibrary Page" duration="956"/>
+    <testCase name="renders Book Card author Organism" duration="561"/>
   </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/template/EntrepeneushipPage/index.test.tsx">
-    <testCase name="renders Entrepeneuship Template" duration="138"/>
+    <testCase name="renders Entrepeneuship Template" duration="108"/>
   </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/atoms/TextHeader/index.test.tsx">
-    <testCase name="renders Header h3" duration="77"/>
-    <testCase name="renders Header h5" duration="13"/>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/pages/LibraryPage/index.test.tsx">
+    <testCase name="renders MyLibrary Page" duration="1050"/>
   </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/Tabs/index.test.tsx">
-    <testCase name="renders Currently Reading Tab Organism" duration="586"/>
-    <testCase name="renders Finished Tab Organism" duration="183"/>
-  </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/molecules/AddToLibrary/index.test.tsx">
-    <testCase name="renders Add to library molecule" duration="190"/>
-  </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/atoms/Button/index.test.tsx">
-    <testCase name="renders contained button" duration="93"/>
-    <testCase name="renders outlined button" duration="66"/>
-  </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/molecules/TextFieldSearch/index.test.tsx">
-    <testCase name="renders Text Field Search molecule" duration="274"/>
-  </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/template/BookDetailTemplate/index.test.tsx">
-    <testCase name="renders BookDetail Template" duration="143"/>
-  </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/atoms/ReadandFinishedButton/index.test.tsx">
-    <testCase name="renders Reading button" duration="135"/>
-  </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/Footer/index.test.tsx">
-    <testCase name="renders Footer Organism" duration="398"/>
-  </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/molecules/NavItems/index.test.tsx">
-    <testCase name="renders Explore molecule" duration="254"/>
+    <testCase name="renders Currently Reading Tab Organism" duration="697"/>
+    <testCase name="renders Finished Tab Organism" duration="154"/>
   </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/template/MyLibrarayTemplate/index.test.tsx">
-    <testCase name="renders Entrepeneuship Template" duration="284"/>
+    <testCase name="renders Entrepeneuship Template" duration="173"/>
+  </file>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/Footer/index.test.tsx">
+    <testCase name="renders Footer Organism" duration="282"/>
+  </file>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/molecules/TextFieldSearch/index.test.tsx">
+    <testCase name="renders Text Field Search molecule" duration="139"/>
   </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/molecules/BookRead/index.test.tsx">
-    <testCase name="renders Book Read Time molecule" duration="54"/>
+    <testCase name="renders Book Read Time molecule" duration="67"/>
+  </file>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/atoms/TextHeader/index.test.tsx">
+    <testCase name="renders Header h3" duration="114"/>
+    <testCase name="renders Header h5" duration="27"/>
+  </file>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/molecules/NavItems/index.test.tsx">
+    <testCase name="renders Explore molecule" duration="120"/>
+  </file>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/molecules/AddToLibrary/index.test.tsx">
+    <testCase name="renders Add to library molecule" duration="145"/>
+  </file>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/atoms/ReadandFinishedButton/index.test.tsx">
+    <testCase name="renders Reading button" duration="90"/>
+  </file>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/template/BookDetailTemplate/index.test.tsx">
+    <testCase name="renders BookDetail Template" duration="184"/>
   </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/atoms/Typography/index.test.tsx">
-    <testCase name="renders Typography header" duration="45"/>
-    <testCase name="renders Typography subtitle" duration="9"/>
-    <testCase name="renders Typography h3" duration="13"/>
+    <testCase name="renders Typography header" duration="34"/>
+    <testCase name="renders Typography subtitle" duration="6"/>
+    <testCase name="renders Typography h3" duration="7"/>
+  </file>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/atoms/Button/index.test.tsx">
+    <testCase name="renders contained button" duration="70"/>
+    <testCase name="renders outlined button" duration="24"/>
   </file>
 </testExecutions>
