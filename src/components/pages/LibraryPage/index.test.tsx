@@ -21,8 +21,25 @@ it("renders MyLibrary Page", async () => {
   );
   await Promise.resolve();
   const MyLibrary = screen.getAllByText("Finished");
+ expect(MyLibrary[0]).toBeTruthy();
+ expect(MyLibrary[0]).toBeInTheDocument();
+ expect(MyLibrary[0]).toBeDefined();
+});
 
 
-  
-  expect(MyLibrary).toBeDefined();
+it("renders MyLibrary Page2", async () => {
+  jest.useFakeTimers();
+  render(
+    <ThemeProvider theme={baseTheme}>
+      <MyLibraryPage />
+    </ThemeProvider>,
+    {
+      wrapper: MemoryRouter,
+    }
+  );
+  await Promise.resolve();
+  const MyLibrary = screen.getAllByText("My Library");
+  expect(MyLibrary[0]).toBeTruthy();
+  expect(MyLibrary[0]).toBeInTheDocument();
+  expect(MyLibrary[0]).toBeDefined();
 });
