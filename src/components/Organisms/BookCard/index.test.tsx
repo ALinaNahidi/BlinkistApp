@@ -5,15 +5,17 @@ import { MemoryRouter } from "react-router-dom";
 import baseTheme from "../../../themes";
 import BookCard from "./BasicCard";
 import { getBooks } from "../../../Data/data";
-// import { useAuth0 } from "@auth0/auth0-react";
 
 jest.mock("@auth0/auth0-react", () => ({
+  Auth0Provider: () => {},
+  withAuthenticationRequired: (component:any) => component,
+
   useAuth0: () => {
     return {
-      isLoading: false,
+      isAuthenticated: true,
       user: { sub: "foobar" },
       mockFn: true,
-      loginWithRedirect: jest.fn(),
+      logout: jest.fn(),
     };
   },
 }));
@@ -25,18 +27,17 @@ const book = getBooks()[0];
 it("renders Book Card author Organism", () => {
   render(
     <ThemeProvider theme={baseTheme}>
-      <BookCard
-        book={book}
-        bookObject={getBooks()}
-        onFinishedClick={handleFinish}
-      />
+        <BookCard
+          book={book}
+          bookObject={getBooks()}
+          onFinishedClick={handleFinish}
+        />
     </ThemeProvider>,
     {
       wrapper: MemoryRouter,
     }
   );
   var Librarybutton = screen.getByText(book.author);
-
     Librarybutton = screen.getByText("13-minute read");
   
   expect(Librarybutton).toBeTruthy();
