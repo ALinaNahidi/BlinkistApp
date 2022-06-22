@@ -9,7 +9,7 @@ import BookDetailComponent from ".";
 afterEach(cleanup);
 
 const book = getBooks()[0];
-
+console.log("any msg");
 it("renders Book Card author Organism", () => {
   render(
     <ThemeProvider theme={baseTheme}>

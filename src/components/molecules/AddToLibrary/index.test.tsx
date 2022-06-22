@@ -7,7 +7,7 @@ import AddToLibrary from "./index";
 
 
 afterEach(cleanup);
-
+console.log("any msg");
 it("renders Add to library molecule", () => {
   render(
     <ThemeProvider theme={baseTheme}>

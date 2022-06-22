@@ -5,7 +5,7 @@ import ReadandFinishedButton from "./index";
 
 
 afterEach(cleanup);
-
+console.log("any msg");
 it("renders Reading button", () => {
   render(<ReadandFinishedButton children="Finished" />, {
     wrapper: MemoryRouter,

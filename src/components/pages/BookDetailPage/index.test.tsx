@@ -7,7 +7,7 @@ import { getBooks } from "../../../Data/data";
 import BookDetailPage from ".";
 
 afterEach(cleanup);
-
+console.log("any msg");
 it("renders BookDetail page", () => {
     const state = {book:getBooks()[0],bookObject:getBooks()}
   render(

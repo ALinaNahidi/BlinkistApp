@@ -8,21 +8,19 @@ import EnterpeneushipPage from ".";
 
 afterEach(cleanup);
 
-
-
+console.log("any msg");
 
 it("renders Entrepeneuship page", () => {
   render(
     <ThemeProvider theme={baseTheme}>
       <MemoryRouter
-        initialEntries={[{ pathname: "/entrepeneuship", state:getBooks() }]}
+        initialEntries={[{ pathname: "/entrepeneuship", state: getBooks() }]}
       >
         <EnterpeneushipPage />
       </MemoryRouter>
     </ThemeProvider>
   );
 
-  
   const tabState = screen.getAllByText("Add to library");
 
   expect(tabState[0]).toBeTruthy();
@@ -30,4 +28,3 @@ it("renders Entrepeneuship page", () => {
   expect(tabState[0]).toBeInTheDocument();
   expect(tabState[0]).toBeDefined();
 });
-

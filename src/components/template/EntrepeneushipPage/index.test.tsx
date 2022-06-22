@@ -6,6 +6,7 @@ import baseTheme from "../../../themes";
 import EntrepeneushipTemplate from ".";
 
 afterEach(cleanup);
+console.log("any msg");
 const DummyView = () => <div>dummy view</div>;
 it("renders Entrepeneuship Template", () => {
   render(

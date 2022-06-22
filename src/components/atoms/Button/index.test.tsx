@@ -5,7 +5,7 @@ import ButtonComponent from "./index";
 
 
 afterEach(cleanup);
-
+console.log("any msg");
 it("renders contained button", () => {
   render(<ButtonComponent varient="contained" title="button" />, {
     wrapper: MemoryRouter,

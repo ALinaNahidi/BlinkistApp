@@ -7,7 +7,7 @@ import Footer from ".";
 
 afterEach(cleanup);
 
-
+console.log("any msg");
 it("renders Footer Organism", () => {
   render(
     <ThemeProvider theme={baseTheme}>

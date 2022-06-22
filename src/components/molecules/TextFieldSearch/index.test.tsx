@@ -7,7 +7,7 @@ import TextFieldSearch from "./index";
 
 
 afterEach(cleanup);
-
+console.log("any msg");
 it("renders Text Field Search molecule", () => {
   render(
     <ThemeProvider theme={baseTheme}>

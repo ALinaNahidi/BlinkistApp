@@ -6,6 +6,7 @@ import baseTheme from "../../../themes";
 import BookDetailTemplate from ".";
 
 afterEach(cleanup);
+console.log("any msg");
 const DummyView = () => <div>dummy view</div>;
 it("renders BookDetail Template", () => {
   render(

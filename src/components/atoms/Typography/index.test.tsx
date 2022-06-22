@@ -5,7 +5,7 @@ import TypographyComponent from "./index";
 
 
 afterEach(cleanup);
-
+console.log("any msg");
 it("renders Typography header", () => {
   render(<TypographyComponent children="caption" variant="header"/>, {
     wrapper: MemoryRouter,

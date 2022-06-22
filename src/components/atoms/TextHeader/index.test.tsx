@@ -5,7 +5,7 @@ import TextHeader from "./index";
 
 
 afterEach(cleanup);
-
+console.log("any msg");
 it("renders Header h3", () => {
   render(<TextHeader children="Header" varient="h3"/>, {
     wrapper: MemoryRouter,

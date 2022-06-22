@@ -7,7 +7,7 @@ import NavItems from "./index";
 
 
 afterEach(cleanup);
-
+console.log("any msg");
 it("renders Explore molecule", () => {
   render(
     <ThemeProvider theme={baseTheme}>

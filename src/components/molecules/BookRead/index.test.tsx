@@ -6,7 +6,7 @@ import baseTheme from "../../../themes";
 import BookReadTime from "./index";
 
 afterEach(cleanup);
-
+console.log("any msg");
 it("renders Book Read Time molecule", () => {
   render(
     <ThemeProvider theme={baseTheme}>

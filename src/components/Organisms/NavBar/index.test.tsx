@@ -8,7 +8,7 @@ import { getBooks } from "../../../Data/data";
 
 
 afterEach(cleanup);
-
+console.log("any msg");
 it("renders NavBar Organism", () => {
   render(
     <ThemeProvider theme={baseTheme}>

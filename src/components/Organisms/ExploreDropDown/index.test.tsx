@@ -9,7 +9,7 @@ import ExploreDropDown from ".";
 afterEach(cleanup);
 
 
-const handleExplore = (arg: any) => {};
+const handleExplore = (arg: any) => {console.log("any msg");};
 
 
 it("renders Explore drop down Organism", () => {

@@ -7,7 +7,7 @@ import { getBooks } from "../../../Data/data";
 import EntrepeneushipPageComponent from ".";
 
 afterEach(cleanup);
-
+console.log("any msg");
 const book = getBooks()[0];
 
 it("renders Book Card author Organism", () => {

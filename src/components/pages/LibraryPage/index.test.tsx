@@ -3,12 +3,11 @@ import { cleanup, render, screen } from "@testing-library/react";
 import React from "react";
 import { MemoryRouter } from "react-router-dom";
 import baseTheme from "../../../themes";
-import { getBooks } from "../../../Data/data";
 import MyLibraryPage from ".";
 
 afterEach(cleanup);
 
-const handleFinish = (arg: any) => {};
+const handleFinish = (arg: any) => {console.log("any msg");};
 
 it("renders MyLibrary Page", async () => {
   jest.useFakeTimers();
