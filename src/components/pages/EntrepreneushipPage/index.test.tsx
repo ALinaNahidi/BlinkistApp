@@ -21,7 +21,7 @@ it("renders Entrepeneuship page", () => {
     </ThemeProvider>
   );
 
-  const tabState = screen.getAllByText("Add to library");
+  const tabState = screen.getAllByText("My Library");
 
   expect(tabState[0]).toBeTruthy();
   expect(tabState[0]).toHaveClass("MuiTypography-body1");

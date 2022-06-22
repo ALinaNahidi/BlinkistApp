@@ -21,10 +21,10 @@ it("renders Book Card author Organism", () => {
       wrapper: MemoryRouter,
     }
   );
-  const Librarybutton = screen.getByText(book.author);
+  const Librarybutton = screen.getAllByText(book.author);
 
-  expect(Librarybutton).toBeTruthy();
-  expect(Librarybutton).toHaveClass("MuiTypography-subtitle2");
-  expect(Librarybutton).toBeInTheDocument();
-  expect(Librarybutton).toBeDefined();
+  expect(Librarybutton[0]).toBeTruthy();
+  expect(Librarybutton[0]).toHaveClass("MuiTypography-subtitle2");
+  expect(Librarybutton[0]).toBeInTheDocument();
+  expect(Librarybutton[0]).toBeDefined();
 });
