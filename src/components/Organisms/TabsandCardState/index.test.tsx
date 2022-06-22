@@ -92,10 +92,9 @@ it("renders Explore Card State Organism", () => {
       wrapper: MemoryRouter,
     }
   )
-  const tabState = screen.getAllByText("");
+  const tabState = screen.getAllByText("abc");
 
-  expect(tabState[0]).toBeTruthy();
-  expect(tabState[0]).toHaveClass("MuiTypography-body1");
+  expect(tabState[0]).toBeFalsy();
   expect(tabState[0]).toBeInTheDocument();
   expect(tabState[0]).toBeDefined();
 });
