@@ -3,5 +3,5 @@ projectKey=ALinaNahidi_BlinkistApp
 serverUrl=https://sonarcloud.io
 serverVersion=8.0.0.29819
 dashboardUrl=https://sonarcloud.io/dashboard?id=ALinaNahidi_BlinkistApp
-ceTaskId=AYGLBGulvqX07obJgjr1
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYGLBGulvqX07obJgjr1
+ceTaskId=AYGLNYjMIQKQ7Qd8R0om
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYGLNYjMIQKQ7Qd8R0om
