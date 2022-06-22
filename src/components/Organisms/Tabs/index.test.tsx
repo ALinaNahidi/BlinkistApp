@@ -8,7 +8,7 @@ import { getBooks } from "../../../Data/data";
 
 afterEach(cleanup);
 
-const handleFinished = (arg: any) => {}
+const handleFinished = (arg: any) => {console.log("any msg")}
 
 it("renders Currently Reading Tab Organism", () => {
   render(
