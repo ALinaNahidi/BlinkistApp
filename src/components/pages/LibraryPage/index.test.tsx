@@ -63,3 +63,21 @@ it("renders MyLibrary Page3", async () => {
   expect(MyLibrary).toBeInTheDocument();
   expect(MyLibrary).toBeDefined();
 });
+
+it("renders MyLibrary Page4", async () => {
+  const state = { book: getBooks()[0], bookObject: getBooks(), tab: "1" };
+
+  jest.useFakeTimers();
+  render(
+    <ThemeProvider theme={baseTheme}>
+      <MemoryRouter initialEntries={[{ pathname: "/", state: { ...state } }]}>
+        <MyLibraryPage />
+      </MemoryRouter>
+    </ThemeProvider>
+  );
+  await Promise.resolve();
+  const MyLibrary = screen.getByText("Explore");
+  expect(MyLibrary).toBeTruthy();
+  expect(MyLibrary).toBeInTheDocument();
+  expect(MyLibrary).toBeDefined();
+});
