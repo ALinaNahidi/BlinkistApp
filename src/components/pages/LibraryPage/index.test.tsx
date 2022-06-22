@@ -21,8 +21,6 @@ it("renders MyLibrary Page", async () => {
   );
   await Promise.resolve();
   const MyLibrary = screen.getAllByText("Finished");
- expect(MyLibrary[0]).toBeTruthy();
- expect(MyLibrary[0]).toBeInTheDocument();
  expect(MyLibrary[0]).toBeDefined();
 });
 
