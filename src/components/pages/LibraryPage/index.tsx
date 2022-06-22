@@ -289,7 +289,6 @@
 
 
 import { Box } from "@mui/material";
-import axios from "axios";
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import TypographyComponent from "../../atoms/Typography";
@@ -341,7 +340,6 @@ const defaultProps = {
 
 const MyLibraryPage = () => {
   const { isAuthenticated } = useAuth0();
-const navigate = useNavigate()
   const a =async()=>{
   await store.dispatch(loadblinks());
   }
