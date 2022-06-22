@@ -8,7 +8,6 @@ import { getBooks } from "../../../Data/data";
 
 
 afterEach(cleanup);
-console.log("any msg");
 it("renders NavBar Organism", () => {
   render(
     <ThemeProvider theme={baseTheme}>
@@ -25,3 +24,36 @@ it("renders NavBar Organism", () => {
   expect(Librarybutton).toBeInTheDocument();
   expect(Librarybutton).toBeDefined();
 });
+
+
+it("renders NavBar Organism2", () => {
+  render(
+    <ThemeProvider theme={baseTheme}>
+      <NavBar bookObject={getBooks()} />
+    </ThemeProvider>,
+    {
+      wrapper: MemoryRouter,
+    }
+  );
+  const Librarybutton = screen.getByText("Explore");
+
+  expect(Librarybutton).toBeTruthy();
+  expect(Librarybutton).toHaveClass("MuiTypography-body1");
+  expect(Librarybutton).toBeInTheDocument();
+  expect(Librarybutton).toBeDefined();
+});
+
+it("renders NavBar Organism3", () => {
+  render(
+    <ThemeProvider theme={baseTheme}>
+      <NavBar bookObject={getBooks()} />
+    </ThemeProvider>,
+    {
+      wrapper: MemoryRouter,
+    }
+  );
+  const Librarybutton = screen.getByText("Log In");
+
+  expect(Librarybutton).toBeTruthy();
+});
+
