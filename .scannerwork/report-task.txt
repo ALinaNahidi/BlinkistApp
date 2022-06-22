@@ -1,0 +1,7 @@
+organization=springdemo1
+projectKey=ALinaNahidi_BlinkistApp
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.29819
+dashboardUrl=https://sonarcloud.io/dashboard?id=ALinaNahidi_BlinkistApp
+ceTaskId=AYGJnZ3b3RRljHRs1Uot
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYGJnZ3b3RRljHRs1Uot
