@@ -1,96 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/store/tests/index.test.tsx">
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/TabsandCardState/index.test.tsx">
+    <testCase name="renders Reading Card State Organism" duration="364"/>
+    <testCase name="renders finished Card State Organism" duration="113"/>
+    <testCase name="renders Library Card State Organism" duration="389"/>
+    <testCase name="renders Explore Card State Organism" duration="26"/>
   </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/ExploreDropDown/index.test.tsx">
-    <testCase name="renders Explore drop down Organism" duration="152"/>
-    <testCase name="renders Explore drop down OnClick Organism" duration="580"/>
+    <testCase name="renders Explore drop down Organism" duration="198"/>
+    <testCase name="renders Explore drop down OnClick Organism" duration="654"/>
+    <testCase name="renders Explore drop down OnClick Organism2" duration="223"/>
   </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/NavBar/index.test.tsx">
-    <testCase name="renders NavBar Organism" duration="1014"/>
-    <testCase name="renders NavBar Organism2" duration="213"/>
-    <testCase name="renders NavBar Organism3" duration="209"/>
+    <testCase name="renders NavBar Organism" duration="956"/>
+    <testCase name="renders NavBar Organism2" duration="194"/>
+    <testCase name="renders NavBar Organism3" duration="218"/>
   </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/pages/EntrepreneushipPage/index.test.tsx">
-    <testCase name="renders Entrepeneuship page" duration="1983"/>
-  </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/App.test.tsx">
-    <testCase name="renders learn react link" duration="957"/>
+    <testCase name="renders Entrepeneuship page" duration="2061"/>
   </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/pages/BookDetailPage/index.test.tsx">
-    <testCase name="renders BookDetail page" duration="1394"/>
-  </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/TabsandCardState/index.test.tsx">
-    <testCase name="renders Reading Card State Organism" duration="510"/>
-    <testCase name="renders finished Card State Organism" duration="98"/>
-    <testCase name="renders Library Card State Organism" duration="271"/>
-    <testCase name="renders Explore Card State Organism" duration="12"/>
+    <testCase name="renders BookDetail page" duration="1309"/>
   </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/pages/LibraryPage/index.test.tsx">
-    <testCase name="renders MyLibrary Page" duration="1197"/>
-    <testCase name="renders MyLibrary Page2" duration="524"/>
+    <testCase name="renders MyLibrary Page" duration="1277"/>
+    <testCase name="renders MyLibrary Page2" duration="360"/>
     <testCase name="renders MyLibrary Page3" duration="466"/>
-    <testCase name="renders MyLibrary Page4" duration="373"/>
+    <testCase name="renders MyLibrary Page4" duration="395"/>
+  </file>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/App.test.tsx">
+    <testCase name="renders learn react link" duration="1185"/>
   </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/EntrepeneushipComponent/index.test.tsx">
-    <testCase name="renders Book Card author Organism" duration="668"/>
-    <testCase name="renders Book Card author Organism2" duration="294"/>
-    <testCase name="renders Book Card author Organism3" duration="70"/>
-  </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/Footer/index.test.tsx">
-    <testCase name="renders Footer Organism" duration="201"/>
-  </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/molecules/NavItems/index.test.tsx">
-    <testCase name="renders Explore molecule" duration="88"/>
-  </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/Tabs/index.test.tsx">
-    <testCase name="renders Currently Reading Tab Organism" duration="433"/>
-    <testCase name="renders Finished Tab Organism" duration="124"/>
-  </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/BookDetailComponent/index.test.tsx">
-    <testCase name="renders Book Card author Organism" duration="364"/>
-  </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/template/EntrepeneushipPage/index.test.tsx">
-    <testCase name="renders Entrepeneuship Template" duration="174"/>
+    <testCase name="renders Book Card author Organism" duration="578"/>
+    <testCase name="renders Book Card author Organism2" duration="407"/>
+    <testCase name="renders Book Card author Organism3" duration="77"/>
   </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/BookCard/index.test.tsx">
-    <testCase name="renders Book Card author Organism" duration="144"/>
-    <testCase name="renders Book Card title Organism" duration="64"/>
-    <testCase name="renders Book Card Finished button Organism" duration="108"/>
-    <testCase name="renders Book Card Read again button Organism" duration="76"/>
-    <testCase name="renders Book Card Add to Library button Organism" duration="139"/>
+    <testCase name="renders Book Card author Organism" duration="121"/>
+    <testCase name="renders Book Card title Organism" duration="81"/>
+    <testCase name="renders Book Card Finished button Organism" duration="178"/>
+    <testCase name="renders Book Card Read again button Organism" duration="68"/>
+    <testCase name="renders Book Card Add to Library button Organism" duration="110"/>
   </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/atoms/Typography/index.test.tsx">
-    <testCase name="renders Typography header" duration="52"/>
-    <testCase name="renders Typography subtitle" duration="15"/>
-    <testCase name="renders Typography h3" duration="12"/>
-    <testCase name="renders Typography h2" duration="11"/>
-    <testCase name="renders Typography default" duration="11"/>
-  </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/molecules/TextFieldSearch/index.test.tsx">
-    <testCase name="renders Text Field Search molecule" duration="147"/>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/BookDetailComponent/index.test.tsx">
+    <testCase name="renders Book Card author Organism" duration="557"/>
   </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/atoms/ReadandFinishedButton/index.test.tsx">
-    <testCase name="renders Reading button" duration="130"/>
+    <testCase name="renders Reading button" duration="119"/>
   </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/template/MyLibrarayTemplate/index.test.tsx">
-    <testCase name="renders Entrepeneuship Template" duration="170"/>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/molecules/NavItems/index.test.tsx">
+    <testCase name="renders Explore molecule" duration="111"/>
   </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/atoms/TextHeader/index.test.tsx">
-    <testCase name="renders Header h3" duration="54"/>
-    <testCase name="renders Header h5" duration="14"/>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/Footer/index.test.tsx">
+    <testCase name="renders Footer Organism" duration="230"/>
   </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/template/BookDetailTemplate/index.test.tsx">
-    <testCase name="renders BookDetail Template" duration="103"/>
-  </file>
-  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/molecules/AddToLibrary/index.test.tsx">
-    <testCase name="renders Add to library molecule" duration="179"/>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/Organisms/Tabs/index.test.tsx">
+    <testCase name="renders Currently Reading Tab Organism" duration="431"/>
+    <testCase name="renders Finished Tab Organism" duration="162"/>
   </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/molecules/BookRead/index.test.tsx">
-    <testCase name="renders Book Read Time molecule" duration="52"/>
+    <testCase name="renders Book Read Time molecule" duration="77"/>
+  </file>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/molecules/TextFieldSearch/index.test.tsx">
+    <testCase name="renders Text Field Search molecule" duration="142"/>
+  </file>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/template/EntrepeneushipPage/index.test.tsx">
+    <testCase name="renders Entrepeneuship Template" duration="129"/>
+  </file>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/template/MyLibrarayTemplate/index.test.tsx">
+    <testCase name="renders Entrepeneuship Template" duration="104"/>
+  </file>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/molecules/AddToLibrary/index.test.tsx">
+    <testCase name="renders Add to library molecule" duration="302"/>
+  </file>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/template/BookDetailTemplate/index.test.tsx">
+    <testCase name="renders BookDetail Template" duration="152"/>
+  </file>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/atoms/TextHeader/index.test.tsx">
+    <testCase name="renders Header h3" duration="77"/>
+    <testCase name="renders Header h5" duration="14"/>
   </file>
   <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/atoms/Button/index.test.tsx">
-    <testCase name="renders contained button" duration="56"/>
-    <testCase name="renders outlined button" duration="20"/>
+    <testCase name="renders contained button" duration="83"/>
+    <testCase name="renders outlined button" duration="36"/>
+  </file>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/components/atoms/Typography/index.test.tsx">
+    <testCase name="renders Typography header" duration="50"/>
+    <testCase name="renders Typography subtitle" duration="11"/>
+    <testCase name="renders Typography h3" duration="12"/>
+    <testCase name="renders Typography h2" duration="16"/>
+    <testCase name="renders Typography default" duration="17"/>
+  </file>
+  <file path="/home/abdua/Desktop/ZemosoTraining/React/blinklist-app/src/store/tests/index.test.tsx">
+    <testCase name="blinksSlice loading bugs if the bugs exist in the cache they should not be fetched from the server again." duration="8"/>
+    <testCase name="blinksSlice loading bugs if the bugs don&apos;t exist in the cache they should be fetched from the server and put in the store" duration="1"/>
+    <testCase name="blinksSlice loading bugs if the bugs don&apos;t exist in the cache loading indicator should be true while fetching the bugs" duration="1"/>
+    <testCase name="blinksSlice loading bugs if the bugs don&apos;t exist in the cache loading indicator should be false after the bugs are fetched" duration="1"/>
+    <testCase name="blinksSlice loading bugs if the bugs don&apos;t exist in the cache loading indicator should be false if the server returns an error" duration="1"/>
   </file>
 </testExecutions>

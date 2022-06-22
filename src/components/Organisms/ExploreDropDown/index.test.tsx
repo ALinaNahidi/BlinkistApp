@@ -49,3 +49,29 @@ it("renders Explore drop down OnClick Organism", async() => {
   expect(Explorebutton).toBeInTheDocument();
   expect(Explorebutton).toBeDefined();
 });
+
+
+it("renders Explore drop down OnClick Organism2", async () => {
+  render(
+    <ThemeProvider theme={baseTheme}>
+      <ExploreDropDown bookObject={getBooks()} onExplore={handleExplore} />
+    </ThemeProvider>,
+    {
+      wrapper: MemoryRouter,
+    }
+  );
+  const Explorebutton = within(screen.getByTestId("popup-state")).getByText(
+    "Explore"
+  );
+  fireEvent.click(Explorebutton);
+
+  const popup = await screen.findByTestId("popup-state-onclick");
+const text= screen.getByText("Entrepeneuship");
+
+  expect(popup).toBeInTheDocument();
+  expect(text).toBeTruthy();
+  expect(Explorebutton).toBeTruthy();
+  expect(Explorebutton).toHaveClass("MuiTypography-body1");
+  expect(Explorebutton).toBeInTheDocument();
+  expect(Explorebutton).toBeDefined();
+});
