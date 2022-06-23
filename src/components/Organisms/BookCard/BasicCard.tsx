@@ -94,7 +94,7 @@ const BookCard = (props: BookCardProps) => {
           component="img"
           height="294.1"
           width="292"
-          src={require(`../../../Images/${props.book.imageLink}`)}          
+          src={require(`../../../assets/Images/${props.book.imageLink}`)}          
           alt="Book Cover"
         />
         <CardContent>

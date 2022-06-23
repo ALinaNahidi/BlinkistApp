@@ -8,7 +8,7 @@ import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import logo from "../../../Images/Logo.png";
+import logo from "../../../assets/Images/Logo.png";
 import { makeStyles } from "@mui/styles";
 import { Theme } from "@emotion/react";
 import SearchIcon from "@mui/icons-material/Search";

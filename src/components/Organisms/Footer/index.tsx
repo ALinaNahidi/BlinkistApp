@@ -3,7 +3,7 @@ import { Box, Container, Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import React from "react";
 
-import logo from "../../../Images/Logo.png";
+import logo from "../../../assets/Images/Logo.png";
 import TypographyComponent from "../../atoms/Typography";
 
 

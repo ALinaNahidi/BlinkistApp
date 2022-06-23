@@ -198,7 +198,7 @@ const BookDetailComponent = (props: BookDetailComponentProps) => {
             width: "304px",
             height: "304px",
           }}
-          src={require(`../../../Images/${book.imageLink}`)}
+          src={require(`../../../assets/Images/${book.imageLink}`)}
           title="Paella dish"
         />
       </Box>

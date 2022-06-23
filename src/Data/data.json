@@ -12,7 +12,7 @@
       "year": 1952,
       "readTime": "15",
       "readersCount": "2.1k",
-      "status": "finished"
+      "status": "reading"
     },
     {
       "id": 3,
@@ -40,7 +40,7 @@
       "year": 1315,
       "readTime": "15",
       "readersCount": "2.1k",
-      "status": "reading"
+      "status": "finished"
     },
     {
       "id": 5,
@@ -68,7 +68,7 @@
       "year": -600,
       "readTime": "15",
       "readersCount": "2.1k",
-      "status": "myLibrary"
+      "status": "finished"
     },
     {
       "id": 7,
@@ -110,7 +110,7 @@
       "year": 1350,
       "readTime": "15",
       "readersCount": "2.1k",
-      "status": "finished"
+      "status": "reading"
     },
     {
       "id": 10,
