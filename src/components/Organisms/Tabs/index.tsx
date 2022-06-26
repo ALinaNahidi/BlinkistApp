@@ -31,16 +31,17 @@ interface BlinkistTabsProps {
 
 const useStyles = makeStyles((theme: Theme) => ({
   TabBox: {
-    padding: "0 12px",
+    padding: "0 0px",
     borderBottom: "0",
     borderColor: "divider",
   },
   TabPanel: {
-    padding: "0 12px",
+    padding: "10px 0px !important",
   },
   Tab: {
     width: "25%",
     paddingLeft: "0px !important",
+    whiteSpace:"nowrap",
   },
 }));
 

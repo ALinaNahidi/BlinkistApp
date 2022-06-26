@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     justifyContent: "center",
     alignItems: "center",
     whiteSpace: "nowrap",
-    marginTop: "11px",
+    // marginTop: "11px",
     backgroundColor: "#fff",
     color: "blue !important",
 
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 
   buttonBox: {
     display: "flex",
-    zIndex: "0",
+    zIndex: "1",
     justifyContent: "center",
     alignItems: "center",
     "&:hover": {

@@ -40,7 +40,7 @@ const useStyles: any = makeStyles((theme: Theme) => ({
     flexDirection: "column",
     alignItems: "left",
     justifyContent: "space-between",
-    flexGrow: 0.1,
+    flexGrow: 0.3,
   },
   Buttons: {
     marginTop: "8%",
@@ -194,7 +194,7 @@ const BookDetailComponent = (props: BookDetailComponentProps) => {
         <Box
           component="img"
           sx={{
-            margin: "0% 15%",
+            margin: "0% 8%",
             width: "304px",
             height: "304px",
           }}

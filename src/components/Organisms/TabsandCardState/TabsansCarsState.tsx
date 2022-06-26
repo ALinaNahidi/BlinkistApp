@@ -29,7 +29,8 @@ const TabsandCardState = (props:TabsandCardStateProps) => {
       sx={{
         display: "flex",
         flexWrap: "wrap",
-        margin:"0%"
+        margin:"0%",
+        padding:"0%"
       }}
     >
       {props.books.map((book: Book) => {

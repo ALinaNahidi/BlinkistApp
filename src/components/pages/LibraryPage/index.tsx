@@ -133,9 +133,6 @@
 
 // export default MyLibraryPage;
 
-
-
-
 // import { Box } from "@mui/material";
 // import axios from "axios";
 // import React, { useState } from "react";
@@ -284,10 +281,6 @@
 
 // export default MyLibraryPage;
 
-
-
-
-
 import { Box } from "@mui/material";
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -340,15 +333,16 @@ const defaultProps = {
 
 const MyLibraryPage = () => {
   const { isAuthenticated } = useAuth0();
-  const a =async()=>{
-  await store.dispatch(loadblinks());
-  }
-  a()
+  const fetchData = async () => {
+    await store.dispatch(loadblinks());
+
+    setBookObject(store.getState().entities.blinks.list);
+  };
+
   const { state } = useLocation();
   var book = defaultProps.book;
   var tab = defaultProps.tab;
   var bookObjectFromState: any = store.getState().entities.blinks.list;
-
   const check = state as LocationState;
   if (check) {
     book = check.book;
@@ -357,19 +351,16 @@ const MyLibraryPage = () => {
 
   const [bookObject, setBookObject] = React.useState(bookObjectFromState);
 
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(null);
 
   React.useEffect(() => {
-       store.dispatch(loadblinks());
-    
-    setBookObject(store.getState().entities.blinks.list);
-
+    fetchData();
     if (tab.toString() === "2" && book.status.toString() === "myLibrary") {
       handleMyLibrary();
     } else if (tab.toString() === "2" && book.status.toString() === "reading") {
       handleMyLibrary();
     }
-  });
+  },[]);
 
   const handleFinishedClick = async (book: Book) => {
     if (book.status === "reading") {
@@ -377,7 +368,6 @@ const MyLibraryPage = () => {
         updateBlinkStatus(book.id, "finished")
       );
       console.log(response);
-      setCount(count + 1);
 
       setBookObject(store.getState().entities.blinks.list);
     } else {
@@ -385,11 +375,9 @@ const MyLibraryPage = () => {
         updateBlinkStatus(book.id, "reading")
       );
       console.log(response);
-      setCount(count + 1);
 
       setBookObject(store.getState().entities.blinks.list);
     }
-    setCount(20);
   };
 
   const handleMyLibrary = async () => {

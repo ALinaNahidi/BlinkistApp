@@ -29,7 +29,7 @@ import { Link } from "react-router-dom";
 
 interface ExploreDropDownProps {
   onExplore: (arg: boolean) => void;
-  bookObject:Array<Book>;
+  bookObject: Array<Book>;
 }
 type Book = {
   id: number;
@@ -50,6 +50,7 @@ const useStyles: any = makeStyles((theme: Theme) => ({
   ListItem: {
     color: "black !important",
     paddingLeft: "9px !important",
+    marginTop: "2%",
     textDecoration: "none !important",
     whiteSpace: "nowrap",
     display: "flex",
@@ -63,6 +64,8 @@ const useStyles: any = makeStyles((theme: Theme) => ({
 
   Grid: {
     flexGrow: "1",
+    justifyContent: "center",
+    alignItems: "center",
   },
   link: {
     textDecoration: "none !important",
@@ -149,164 +152,184 @@ const ExploreDropDown = (props: ExploreDropDownProps) => {
                 >
                   <Box
                     py={{ xs: 3, sm: 5 }}
-                    px={{ xs: 0, sm: 0 }}
+                    px={{ xs: 4, sm: 12 }}
                     bgcolor="#F1F6F4"
                     color="#03314B"
                   >
-                    <Container maxWidth="lg" sx={{ marginLeft: "15%" }}>
-                      <Grid container spacing={5} className={classes.Grid}>
-                        <Grid item xs={12} sm={4}>
-                          <Box
-                            sx={{
-                              height: "24px",
-                              ":hover": {
-                                color: "blue !important",
-                              },
-                            }}
-                            className={classes.ListItem}
-                          >
-                            Explore by category
-                          </Box>
-                        </Grid>
-                        <Grid item xs={12} sm={4}>
-                          <Box sx={{ height: "24px" }}>
-                            See recently added titles
-                          </Box>
-                        </Grid>
-                        <Grid item xs={12} sm={4}>
-                          <Box sx={{ height: "24px" }}>See popular titles</Box>
-                        </Grid>
-                      </Grid>
-                      <hr className={classes.Grid} />
-                    </Container>
-                    <Container maxWidth="lg" sx={{ marginLeft: "15%" }}>
-                      <Grid container spacing={5} className={classes.Grid}>
-                        <Grid item xs={12} sm={4}>
-                          <Box
-                            className={classes.ListItem}
-                            sx={{
-                              ":hover": {
-                                color: "blue !important",
-                              },
-                            }}
-                          >
-                            <NotificationsNoneOutlinedIcon />
-                            <Link
-                              to={"/entrepeneuship"}
-                              state={props.bookObject}
+                    <Box
+                      sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyItems: "center",
+                        marginLeft:"-15%"
+                      }}
+                    >
+                      <Container maxWidth="md">
+                        <Grid container spacing={5} className={classes.Grid}>
+                          <Grid item xs={12} sm={4}>
+                            <Box
+                              sx={{
+                                height: "24px",
+                                ":hover": {
+                                  color: "blue !important",
+                                },
+                              }}
                               className={classes.ListItem}
                             >
-                              <Typography
-                                sx={{
-                                  "&:hover": {
-                                    color: "blue",
-                                    fontWeight: "700",
-                                  },
-                                }}
+                              Explore by category
+                            </Box>
+                          </Grid>
+                          <Grid item xs={12} sm={4}>
+                            <Box
+                              sx={{ height: "24px" }}
+                              className={classes.ListItem}
+                            >
+                              See recently added titles
+                            </Box>
+                          </Grid>
+                          <Grid item xs={12} sm={4}>
+                            <Box
+                              sx={{ height: "24px" }}
+                              className={classes.ListItem}
+                            >
+                              See popular titles
+                            </Box>
+                          </Grid>
+                        </Grid>
+                        <hr className={classes.Grid} />
+                      </Container>
+                      <Container maxWidth="md" >
+                        <Grid container spacing={15} className={classes.Grid}>
+                          <Grid item xs={12} sm={4}>
+                            <Box
+                              className={classes.ListItem}
+                              sx={{
+                                ":hover": {
+                                  color: "blue !important",
+                                },
+                              }}
+                            >
+                              <NotificationsNoneOutlinedIcon />
+                              <Link
+                                to={"/entrepeneuship"}
+                                state={props.bookObject}
+                                className={classes.ListItem}
                               >
-                                Entrepeneuship{" "}
+                                <Typography
+                                  sx={{
+                                    "&:hover": {
+                                      color: "blue",
+                                      fontWeight: "700",
+                                    },
+                                  }}
+                                >
+                                  Entrepeneuship{" "}
+                                </Typography>
+                              </Link>
+                            </Box>
+                            <Box className={classes.ListItem}>
+                              <ScienceOutlinedIcon />
+                              <Typography color="inherit">
+                                Waht is Nonfiction?
                               </Typography>
-                            </Link>
-                          </Box>
-                          <Box className={classes.ListItem}>
-                            <ScienceOutlinedIcon />
-                            <Typography color="inherit">
-                              Waht is Nonfiction?
-                            </Typography>
-                          </Box>
-                          <Box className={classes.ListItem}>
-                            <PublicOutlinedIcon />
-                            <Typography color="inherit">
-                              What to read next?
-                            </Typography>
-                          </Box>
-                          <Box className={classes.ListItem}>
-                            <BusinessCenterOutlinedIcon />
-                            <Typography color="inherit">
-                              Benefits of reading
-                            </Typography>
-                          </Box>
-                          <Box className={classes.ListItem}>
-                            <PsychologyOutlinedIcon />
-                            <Typography color="inherit">Pricing</Typography>
-                          </Box>
-                          <Box className={classes.ListItem}>
-                            <EnergySavingsLeafOutlinedIcon />
-                            <Typography color="inherit">
-                              BTypographyist business
-                            </Typography>
-                          </Box>
+                            </Box>
+                            <Box className={classes.ListItem}>
+                              <PublicOutlinedIcon />
+                              <Typography color="inherit">
+                                What to read next?
+                              </Typography>
+                            </Box>
+                            <Box className={classes.ListItem}>
+                              <BusinessCenterOutlinedIcon />
+                              <Typography color="inherit">
+                                Benefits of reading
+                              </Typography>
+                            </Box>
+                            <Box className={classes.ListItem}>
+                              <PsychologyOutlinedIcon />
+                              <Typography color="inherit">Pricing</Typography>
+                            </Box>
+                            <Box className={classes.ListItem}>
+                              <EnergySavingsLeafOutlinedIcon />
+                              <Typography color="inherit">
+                                BTypographyist business
+                              </Typography>
+                            </Box>
+                          </Grid>
+
+                          <Grid item xs={12} sm={4}>
+                            <Box className={classes.ListItem}>
+                              <AccountBalanceOutlinedIcon />
+                              <Typography color="inherit">
+                                Gift cards
+                              </Typography>
+                            </Box>
+                            <Box className={classes.ListItem}>
+                              <MedicationLiquidOutlinedIcon />
+                              <Typography color="inherit">
+                                BTypographyist magaine
+                              </Typography>
+                            </Box>
+                            <Box className={classes.ListItem}>
+                              <HistoryEduOutlinedIcon />
+                              <Typography color="inherit">
+                                Contact & help
+                              </Typography>
+                            </Box>
+                            <Box className={classes.ListItem}>
+                              <TipsAndUpdatesOutlinedIcon />
+                              <Typography color="inherit">About</Typography>
+                            </Box>
+                            <Box className={classes.ListItem}>
+                              <HourglassBottomOutlinedIcon />
+                              <Typography color="inherit">Careers</Typography>
+                            </Box>
+                            <Box className={classes.ListItem}>
+                              <ModeStandbyOutlinedIcon />
+                              <Typography color="inherit">Partners</Typography>
+                            </Box>
+                          </Grid>
+                          <Grid item xs={12} sm={4}>
+                            <Box className={classes.ListItem}>
+                              <TimelineOutlinedIcon />
+                              <Typography color="inherit">
+                                Code of Conduct
+                              </Typography>
+                            </Box>
+                            <Box className={classes.ListItem}>
+                              <EqualizerOutlinedIcon />
+                              <Typography color="inherit">
+                                Code of Conduct
+                              </Typography>
+                            </Box>
+                            <Box className={classes.ListItem}>
+                              <ChatBubbleOutlineOutlinedIcon />
+                              <Typography color="inherit">
+                                Code of Conduct
+                              </Typography>
+                            </Box>
+                            <Box className={classes.ListItem}>
+                              <CurrencyRupeeOutlinedIcon />
+                              <Typography color="inherit">
+                                Code of Conduct
+                              </Typography>
+                            </Box>
+                            <Box className={classes.ListItem}>
+                              <VolunteerActivismOutlinedIcon />
+                              <Typography color="inherit">
+                                Code of Conduct
+                              </Typography>
+                            </Box>
+                            <Box className={classes.ListItem}>
+                              <WorkspacePremiumOutlinedIcon />
+                              <Typography color="inherit">
+                                Code of Conduct
+                              </Typography>
+                            </Box>
+                          </Grid>
                         </Grid>
-                        <Grid item xs={12} sm={4}>
-                          <Box className={classes.ListItem}>
-                            <AccountBalanceOutlinedIcon />
-                            <Typography color="inherit">Gift cards</Typography>
-                          </Box>
-                          <Box className={classes.ListItem}>
-                            <MedicationLiquidOutlinedIcon />
-                            <Typography color="inherit">
-                              BTypographyist magaine
-                            </Typography>
-                          </Box>
-                          <Box className={classes.ListItem}>
-                            <HistoryEduOutlinedIcon />
-                            <Typography color="inherit">
-                              Contact & help
-                            </Typography>
-                          </Box>
-                          <Box className={classes.ListItem}>
-                            <TipsAndUpdatesOutlinedIcon />
-                            <Typography color="inherit">About</Typography>
-                          </Box>
-                          <Box className={classes.ListItem}>
-                            <HourglassBottomOutlinedIcon />
-                            <Typography color="inherit">Careers</Typography>
-                          </Box>
-                          <Box className={classes.ListItem}>
-                            <ModeStandbyOutlinedIcon />
-                            <Typography color="inherit">Partners</Typography>
-                          </Box>
-                        </Grid>
-                        <Grid item xs={12} sm={4}>
-                          <Box className={classes.ListItem}>
-                            <TimelineOutlinedIcon />
-                            <Typography color="inherit">
-                              Code of Conduct
-                            </Typography>
-                          </Box>
-                          <Box className={classes.ListItem}>
-                            <EqualizerOutlinedIcon />
-                            <Typography color="inherit">
-                              Code of Conduct
-                            </Typography>
-                          </Box>
-                          <Box className={classes.ListItem}>
-                            <ChatBubbleOutlineOutlinedIcon />
-                            <Typography color="inherit">
-                              Code of Conduct
-                            </Typography>
-                          </Box>
-                          <Box className={classes.ListItem}>
-                            <CurrencyRupeeOutlinedIcon />
-                            <Typography color="inherit">
-                              Code of Conduct
-                            </Typography>
-                          </Box>
-                          <Box className={classes.ListItem}>
-                            <VolunteerActivismOutlinedIcon />
-                            <Typography color="inherit">
-                              Code of Conduct
-                            </Typography>
-                          </Box>
-                          <Box className={classes.ListItem}>
-                            <WorkspacePremiumOutlinedIcon />
-                            <Typography color="inherit">
-                              Code of Conduct
-                            </Typography>
-                          </Box>
-                        </Grid>
-                      </Grid>
-                    </Container>
+                      </Container>
+                    </Box>
                   </Box>
                 </Popover>
               </div>

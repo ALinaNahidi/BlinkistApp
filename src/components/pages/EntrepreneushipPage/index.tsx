@@ -33,7 +33,7 @@ const EnterpeneushipPage = () => {
       <EntrepeneushipTemplate
         image={
           <CardMedia
-            sx={{ margin: "10% 0% 5%", width: "912px", height: "264px" }}
+            sx={{ margin: "10% 12% 0% 0%  ", MaxWidth: "912px", height: "264px" }}
             image={image}
             title="Paella dish"
           />

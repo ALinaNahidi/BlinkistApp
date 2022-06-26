@@ -12,7 +12,7 @@ it("renders BookDetail Template", () => {
   render(
     <ThemeProvider theme={baseTheme}>
       <MemoryRouter>
-        <BookDetailTemplate bookDetailComponent={<DummyView />} />
+        <BookDetailTemplate bookDetailComponent={<DummyView />}/>
       </MemoryRouter>
     </ThemeProvider>
   );

@@ -32,7 +32,7 @@ const classes = useStyles();
   return (
     <React.Fragment>
       <Box py={{ xs: 0, sm: 7 }} bgcolor="#F1F6F4" color="#03314B">
-        <Container sx={{ marginLeft: "16%" }}>
+        <Container sx={{ marginLeft: "21%" }}>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={5}>
               <Box

@@ -37,12 +37,13 @@ const baseTheme = createTheme({
   spacing: 4,
 
   components: {
+
     MuiContainer: {
       styleOverrides: {
         root: {
-          margin: "0.5% 2.5%",
+          // margin: "0.5% 7%",
           padding: "0px !important",
-          flexGrow: "1",
+          flexGrow: "0",
         },
       },
     },
@@ -95,7 +96,6 @@ const baseTheme = createTheme({
         },
         root: {
           textTransform: "none",
-        
         },
       },
     },
@@ -116,6 +116,17 @@ const baseTheme = createTheme({
         },
       },
     },
+
+    MuiPaper:{
+      styleOverrides:{
+        root:{
+          margin:"0",
+          padding:"0",
+          background:'#fff'
+        }
+      }
+    },
+    
   },
 });
 

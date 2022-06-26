@@ -32,7 +32,7 @@ const EntrepeneushipTemplate = (props: EntrepeneushipTemplateProps) => {
     <Box className={style.root}>
       <Paper className={style.paper}>
         <Grid container className={style.container} spacing={2}>
-          <Grid item xs={2} className={style.sideNav}></Grid>
+          <Grid item xs={2.5} className={style.sideNav}></Grid>
           <Grid item container xs alignContent="flex-start" spacing={2}>
             <Grid item className={style.banner}>
 
